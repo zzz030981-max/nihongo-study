@@ -6,6 +6,12 @@
     "path": "audio/examples/anata.mp3"
   },
   {
+    "id": "example-anzen",
+    "text": "安全に気をつけます。",
+    "kana": "",
+    "path": "audio/examples/anzen.mp3"
+  },
+  {
     "id": "example-arigatou",
     "text": "ありがとうございます。",
     "kana": "",
@@ -36,6 +42,24 @@
     "path": "audio/examples/benkyou.mp3"
   },
   {
+    "id": "example-bunmei",
+    "text": "日本の文化に興味があります。",
+    "kana": "",
+    "path": "audio/examples/bunmei.mp3"
+  },
+  {
+    "id": "example-bunpai",
+    "text": "資源を公平に分配します。",
+    "kana": "",
+    "path": "audio/examples/bunpai.mp3"
+  },
+  {
+    "id": "example-bunpou",
+    "text": "文法を復習します。",
+    "kana": "",
+    "path": "audio/examples/bunpou.mp3"
+  },
+  {
     "id": "example-bunseki",
     "text": "データを分析します。",
     "kana": "",
@@ -60,16 +84,46 @@
     "path": "audio/examples/chizu.mp3"
   },
   {
+    "id": "example-chousa",
+    "text": "市場を調査します。",
+    "kana": "",
+    "path": "audio/examples/chousa.mp3"
+  },
+  {
     "id": "example-densha",
     "text": "電車に乗ります。",
     "kana": "",
     "path": "audio/examples/densha.mp3"
   },
   {
+    "id": "example-doryoku",
+    "text": "努力を続けます。",
+    "kana": "",
+    "path": "audio/examples/doryoku.mp3"
+  },
+  {
+    "id": "example-eikyou",
+    "text": "天気の影響を受けます。",
+    "kana": "",
+    "path": "audio/examples/eikyou.mp3"
+  },
+  {
     "id": "example-eki",
     "text": "駅はどこですか。",
     "kana": "",
     "path": "audio/examples/eki.mp3"
+  },
+  {
+    "id": "example-fuan",
+    "text": "試験の前は不安です。",
+    "kana": "",
+    "path": "audio/examples/fuan.mp3"
+  },
+  {
+    "id": "example-futsuu",
+    "text": "普通の切符を買います。",
+    "kana": "",
+    "path": "audio/examples/futsuu.mp3"
   },
   {
     "id": "example-gainen",
@@ -90,10 +144,28 @@
     "path": "audio/examples/genin.mp3"
   },
   {
+    "id": "example-genshou",
+    "text": "人口が減少しています。",
+    "kana": "",
+    "path": "audio/examples/genshou.mp3"
+  },
+  {
+    "id": "example-gensoku",
+    "text": "原則として変更できません。",
+    "kana": "",
+    "path": "audio/examples/gensoku.mp3"
+  },
+  {
     "id": "example-gohan",
     "text": "ご飯を食べます。",
     "kana": "",
     "path": "audio/examples/gohan.mp3"
+  },
+  {
+    "id": "example-gutaiteki",
+    "text": "具体的な例を出します。",
+    "kana": "",
+    "path": "audio/examples/gutaiteki.mp3"
   },
   {
     "id": "example-hai",
@@ -102,10 +174,22 @@
     "path": "audio/examples/hai.mp3"
   },
   {
+    "id": "example-haikei",
+    "text": "問題の背景を説明します。",
+    "kana": "",
+    "path": "audio/examples/haikei.mp3"
+  },
+  {
     "id": "example-hatsuon",
     "text": "発音を練習します。",
     "kana": "",
     "path": "audio/examples/hatsuon.mp3"
+  },
+  {
+    "id": "example-henji",
+    "text": "メールの返事を書きます。",
+    "kana": "",
+    "path": "audio/examples/henji.mp3"
   },
   {
     "id": "example-henka",
@@ -120,6 +204,18 @@
     "path": "audio/examples/hidari.mp3"
   },
   {
+    "id": "example-hihan",
+    "text": "建設的に批判します。",
+    "kana": "",
+    "path": "audio/examples/hihan.mp3"
+  },
+  {
+    "id": "example-himoduku",
+    "text": "データが利用者に紐づいています。",
+    "kana": "",
+    "path": "audio/examples/himoduku.mp3"
+  },
+  {
     "id": "example-hon",
     "text": "本を読みます。",
     "kana": "",
@@ -132,10 +228,52 @@
     "path": "audio/examples/hoteru.mp3"
   },
   {
+    "id": "example-houhou",
+    "text": "いい方法を探しています。",
+    "kana": "",
+    "path": "audio/examples/houhou.mp3"
+  },
+  {
+    "id": "example-houkoku",
+    "text": "結果を報告します。",
+    "kana": "",
+    "path": "audio/examples/houkoku.mp3"
+  },
+  {
+    "id": "example-houshin",
+    "text": "今後の方針を示します。",
+    "kana": "",
+    "path": "audio/examples/houshin.mp3"
+  },
+  {
+    "id": "example-hyougen",
+    "text": "自然な表現を覚えます。",
+    "kana": "",
+    "path": "audio/examples/hyougen.mp3"
+  },
+  {
+    "id": "example-hyouka",
+    "text": "成果を評価します。",
+    "kana": "",
+    "path": "audio/examples/hyouka.mp3"
+  },
+  {
+    "id": "example-ichizuke",
+    "text": "研究の位置づけを明確にします。",
+    "kana": "",
+    "path": "audio/examples/ichizuke.mp3"
+  },
+  {
     "id": "example-iie",
     "text": "いいえ、違います。",
     "kana": "",
     "path": "audio/examples/iie.mp3"
+  },
+  {
+    "id": "example-iji",
+    "text": "健康を維持します。",
+    "kana": "",
+    "path": "audio/examples/iji.mp3"
   },
   {
     "id": "example-ima",
@@ -144,10 +282,22 @@
     "path": "audio/examples/ima.mp3"
   },
   {
+    "id": "example-imi",
+    "text": "この言葉の意味を調べます。",
+    "kana": "",
+    "path": "audio/examples/imi.mp3"
+  },
+  {
     "id": "example-ishiki",
     "text": "安全を意識してください。",
     "kana": "",
     "path": "audio/examples/ishiki.mp3"
+  },
+  {
+    "id": "example-jikanwari",
+    "text": "時間割を確認します。",
+    "kana": "",
+    "path": "audio/examples/jikanwari.mp3"
   },
   {
     "id": "example-jisho",
@@ -160,6 +310,12 @@
     "text": "実際に使ってみます。",
     "kana": "",
     "path": "audio/examples/jissai.mp3"
+  },
+  {
+    "id": "example-jizoku",
+    "text": "成長を持続させます。",
+    "kana": "",
+    "path": "audio/examples/jizoku.mp3"
   },
   {
     "id": "example-jouhou",
@@ -180,6 +336,18 @@
     "path": "audio/examples/juyou.mp3"
   },
   {
+    "id": "example-juyoudo",
+    "text": "重要度を分けます。",
+    "kana": "",
+    "path": "audio/examples/juyoudo.mp3"
+  },
+  {
+    "id": "example-jyouken",
+    "text": "条件を確認します。",
+    "kana": "",
+    "path": "audio/examples/jyouken.mp3"
+  },
+  {
     "id": "example-kachi",
     "text": "時間の価値を考えます。",
     "kana": "",
@@ -190,6 +358,12 @@
     "text": "今後の課題を整理します。",
     "kana": "",
     "path": "audio/examples/kadai.mp3"
+  },
+  {
+    "id": "example-kaigi",
+    "text": "明日の会議に出ます。",
+    "kana": "",
+    "path": "audio/examples/kaigi.mp3"
   },
   {
     "id": "example-kaiketsu",
@@ -210,10 +384,40 @@
     "path": "audio/examples/kaisha.mp3"
   },
   {
+    "id": "example-kaizen",
+    "text": "作業の流れを改善します。",
+    "kana": "",
+    "path": "audio/examples/kaizen.mp3"
+  },
+  {
+    "id": "example-kakudai",
+    "text": "事業を拡大します。",
+    "kana": "",
+    "path": "audio/examples/kakudai.mp3"
+  },
+  {
     "id": "example-kakunin",
     "text": "予定を確認してください。",
     "kana": "",
     "path": "audio/examples/kakunin.mp3"
+  },
+  {
+    "id": "example-kakushin",
+    "text": "技術革新が進んでいます。",
+    "kana": "",
+    "path": "audio/examples/kakushin.mp3"
+  },
+  {
+    "id": "example-kandou",
+    "text": "物語に感動しました。",
+    "kana": "",
+    "path": "audio/examples/kandou.mp3"
+  },
+  {
+    "id": "example-kanji",
+    "text": "漢字を覚えます。",
+    "kana": "",
+    "path": "audio/examples/kanji.mp3"
   },
   {
     "id": "example-kankei",
@@ -226,6 +430,18 @@
     "text": "働く環境を整えます。",
     "kana": "",
     "path": "audio/examples/kankyou.mp3"
+  },
+  {
+    "id": "example-kanousei",
+    "text": "成功の可能性があります。",
+    "kana": "",
+    "path": "audio/examples/kanousei.mp3"
+  },
+  {
+    "id": "example-kansou",
+    "text": "映画の感想を書きます。",
+    "kana": "",
+    "path": "audio/examples/kansou.mp3"
   },
   {
     "id": "example-kantan",
@@ -246,16 +462,64 @@
     "path": "audio/examples/keiken.mp3"
   },
   {
+    "id": "example-keiyaku",
+    "text": "契約の内容を確認します。",
+    "kana": "",
+    "path": "audio/examples/keiyaku.mp3"
+  },
+  {
+    "id": "example-kekka",
+    "text": "試験の結果を待っています。",
+    "kana": "",
+    "path": "audio/examples/kekka.mp3"
+  },
+  {
+    "id": "example-kencho",
+    "text": "顕著な違いが見られます。",
+    "kana": "",
+    "path": "audio/examples/kencho.mp3"
+  },
+  {
+    "id": "example-kentou",
+    "text": "導入を検討しています。",
+    "kana": "",
+    "path": "audio/examples/kentou.mp3"
+  },
+  {
     "id": "example-kibun",
     "text": "今日は気分がいいです。",
     "kana": "",
     "path": "audio/examples/kibun.mp3"
   },
   {
+    "id": "example-kijun",
+    "text": "判断の基準を決めます。",
+    "kana": "",
+    "path": "audio/examples/kijun.mp3"
+  },
+  {
+    "id": "example-kiken",
+    "text": "ここは危険です。",
+    "kana": "",
+    "path": "audio/examples/kiken.mp3"
+  },
+  {
     "id": "example-kinou",
     "text": "昨日勉強しました。",
     "kana": "",
     "path": "audio/examples/kinou.mp3"
+  },
+  {
+    "id": "example-kippu",
+    "text": "切符を二枚買います。",
+    "kana": "",
+    "path": "audio/examples/kippu.mp3"
+  },
+  {
+    "id": "example-kitei",
+    "text": "規定に従って処理します。",
+    "kana": "",
+    "path": "audio/examples/kitei.mp3"
   },
   {
     "id": "example-konbanwa",
@@ -282,10 +546,28 @@
     "path": "audio/examples/koohii.mp3"
   },
   {
+    "id": "example-kouho",
+    "text": "候補を三つ選びました。",
+    "kana": "",
+    "path": "audio/examples/kouho.mp3"
+  },
+  {
     "id": "example-kouka",
     "text": "この方法は効果があります。",
     "kana": "",
     "path": "audio/examples/kouka.mp3"
+  },
+  {
+    "id": "example-kouken",
+    "text": "地域社会に貢献します。",
+    "kana": "",
+    "path": "audio/examples/kouken.mp3"
+  },
+  {
+    "id": "example-kouritsu",
+    "text": "効率を上げます。",
+    "kana": "",
+    "path": "audio/examples/kouritsu.mp3"
   },
   {
     "id": "example-kousatsu",
@@ -294,10 +576,22 @@
     "path": "audio/examples/kousatsu.mp3"
   },
   {
+    "id": "example-kousoku",
+    "text": "時間に拘束されます。",
+    "kana": "",
+    "path": "audio/examples/kousoku.mp3"
+  },
+  {
     "id": "example-kouzou",
     "text": "文章の構造を分析します。",
     "kana": "",
     "path": "audio/examples/kouzou.mp3"
+  },
+  {
+    "id": "example-koyou",
+    "text": "雇用の機会が増えます。",
+    "kana": "",
+    "path": "audio/examples/koyou.mp3"
   },
   {
     "id": "example-kuukou",
@@ -342,16 +636,40 @@
     "path": "audio/examples/mokuteki.mp3"
   },
   {
+    "id": "example-mondai",
+    "text": "問題を一緒に考えます。",
+    "kana": "",
+    "path": "audio/examples/mondai.mp3"
+  },
+  {
     "id": "example-muzukashii",
     "text": "日本語は難しいです。",
     "kana": "",
     "path": "audio/examples/muzukashii.mp3"
   },
   {
+    "id": "example-nattoku",
+    "text": "説明を聞いて納得しました。",
+    "kana": "",
+    "path": "audio/examples/nattoku.mp3"
+  },
+  {
     "id": "example-nihongo",
     "text": "日本語を勉強します。",
     "kana": "",
     "path": "audio/examples/nihongo.mp3"
+  },
+  {
+    "id": "example-nimotsu",
+    "text": "荷物を預けます。",
+    "kana": "",
+    "path": "audio/examples/nimotsu.mp3"
+  },
+  {
+    "id": "example-norikae",
+    "text": "次の駅で乗り換えます。",
+    "kana": "",
+    "path": "audio/examples/norikae.mp3"
   },
   {
     "id": "example-ocha",
@@ -396,6 +714,12 @@
     "path": "audio/examples/raamen.mp3"
   },
   {
+    "id": "example-renkei",
+    "text": "チームで連携します。",
+    "kana": "",
+    "path": "audio/examples/renkei.mp3"
+  },
+  {
     "id": "example-renraku",
     "text": "あとで連絡します。",
     "kana": "",
@@ -406,6 +730,54 @@
     "text": "会話を練習します。",
     "kana": "",
     "path": "audio/examples/renshuu.mp3"
+  },
+  {
+    "id": "example-rikai",
+    "text": "利害が一致しません。",
+    "kana": "",
+    "path": "audio/examples/rikai.mp3"
+  },
+  {
+    "id": "example-riyuu",
+    "text": "理由を説明してください。",
+    "kana": "",
+    "path": "audio/examples/riyuu.mp3"
+  },
+  {
+    "id": "example-ronri",
+    "text": "論理的に説明します。",
+    "kana": "",
+    "path": "audio/examples/ronri.mp3"
+  },
+  {
+    "id": "example-ryougae",
+    "text": "空港で両替します。",
+    "kana": "",
+    "path": "audio/examples/ryougae.mp3"
+  },
+  {
+    "id": "example-sairyou",
+    "text": "担当者の裁量に任せます。",
+    "kana": "",
+    "path": "audio/examples/sairyou.mp3"
+  },
+  {
+    "id": "example-seichou",
+    "text": "毎日少しずつ成長します。",
+    "kana": "",
+    "path": "audio/examples/seichou.mp3"
+  },
+  {
+    "id": "example-seido",
+    "text": "新しい制度が始まりました。",
+    "kana": "",
+    "path": "audio/examples/seido.mp3"
+  },
+  {
+    "id": "example-seikaku",
+    "text": "彼は明るい性格です。",
+    "kana": "",
+    "path": "audio/examples/seikaku.mp3"
   },
   {
     "id": "example-seikatsu",
@@ -438,16 +810,100 @@
     "path": "audio/examples/setsumei.mp3"
   },
   {
+    "id": "example-setsuyaku",
+    "text": "電気を節約します。",
+    "kana": "",
+    "path": "audio/examples/setsuyaku.mp3"
+  },
+  {
+    "id": "example-shakai",
+    "text": "社会の変化を学びます。",
+    "kana": "",
+    "path": "audio/examples/shakai.mp3"
+  },
+  {
+    "id": "example-shigen",
+    "text": "限られた資源を使います。",
+    "kana": "",
+    "path": "audio/examples/shigen.mp3"
+  },
+  {
+    "id": "example-shigoto",
+    "text": "仕事は午後六時に終わります。",
+    "kana": "",
+    "path": "audio/examples/shigoto.mp3"
+  },
+  {
+    "id": "example-shisa",
+    "text": "結果は重要な示唆を与えます。",
+    "kana": "",
+    "path": "audio/examples/shisa.mp3"
+  },
+  {
     "id": "example-shiten",
     "text": "別の視点から考えます。",
     "kana": "",
     "path": "audio/examples/shiten.mp3"
   },
   {
+    "id": "example-shoukai",
+    "text": "友達を紹介します。",
+    "kana": "",
+    "path": "audio/examples/shoukai.mp3"
+  },
+  {
+    "id": "example-shourai",
+    "text": "将来日本で働きたいです。",
+    "kana": "",
+    "path": "audio/examples/shourai.mp3"
+  },
+  {
+    "id": "example-shousai",
+    "text": "詳細をメールで送ります。",
+    "kana": "",
+    "path": "audio/examples/shousai.mp3"
+  },
+  {
+    "id": "example-shuchou",
+    "text": "自分の意見を主張します。",
+    "kana": "",
+    "path": "audio/examples/shuchou.mp3"
+  },
+  {
+    "id": "example-shukudai",
+    "text": "宿題を忘れました。",
+    "kana": "",
+    "path": "audio/examples/shukudai.mp3"
+  },
+  {
     "id": "example-sokushin",
     "text": "交流を促進します。",
     "kana": "",
     "path": "audio/examples/sokushin.mp3"
+  },
+  {
+    "id": "example-soshiki",
+    "text": "組織の目標を共有します。",
+    "kana": "",
+    "path": "audio/examples/soshiki.mp3"
+  },
+  {
+    "id": "example-soudan",
+    "text": "先生に相談します。",
+    "kana": "",
+    "path": "audio/examples/soudan.mp3"
+  },
+  {
+    "id": "example-sougo",
+    "text": "相互理解を深めます。",
+    "kana": "",
+    "path": "audio/examples/sougo.mp3"
+  },
+  {
+    "id": "example-sousai",
+    "text": "利益と損失が相殺されます。",
+    "kana": "",
+    "path": "audio/examples/sousai.mp3"
   },
   {
     "id": "example-sumimasen",
@@ -462,6 +918,18 @@
     "path": "audio/examples/sushi.mp3"
   },
   {
+    "id": "example-taiou",
+    "text": "すぐに対応します。",
+    "kana": "",
+    "path": "audio/examples/taiou.mp3"
+  },
+  {
+    "id": "example-taisaku",
+    "text": "早めに対策を立てます。",
+    "kana": "",
+    "path": "audio/examples/taisaku.mp3"
+  },
+  {
     "id": "example-takai",
     "text": "あれは高いです。",
     "kana": "",
@@ -474,16 +942,46 @@
     "path": "audio/examples/takushii.mp3"
   },
   {
+    "id": "example-teigi",
+    "text": "用語を定義します。",
+    "kana": "",
+    "path": "audio/examples/teigi.mp3"
+  },
+  {
     "id": "example-toire",
     "text": "トイレはどこですか。",
     "kana": "",
     "path": "audio/examples/toire.mp3"
   },
   {
+    "id": "example-tokubetsu",
+    "text": "今日は特別な日です。",
+    "kana": "",
+    "path": "audio/examples/tokubetsu.mp3"
+  },
+  {
     "id": "example-tomodachi",
     "text": "友達に会います。",
     "kana": "",
     "path": "audio/examples/tomodachi.mp3"
+  },
+  {
+    "id": "example-tougou",
+    "text": "複数の情報を統合します。",
+    "kana": "",
+    "path": "audio/examples/tougou.mp3"
+  },
+  {
+    "id": "example-toushi",
+    "text": "教育への投資が必要です。",
+    "kana": "",
+    "path": "audio/examples/toushi.mp3"
+  },
+  {
+    "id": "example-uketsuke",
+    "text": "受付で名前を言います。",
+    "kana": "",
+    "path": "audio/examples/uketsuke.mp3"
   },
   {
     "id": "example-ushiro",
@@ -510,6 +1008,36 @@
     "path": "audio/examples/yasui.mp3"
   },
   {
+    "id": "example-yoyaku",
+    "text": "レストランを予約しました。",
+    "kana": "",
+    "path": "audio/examples/yoyaku.mp3"
+  },
+  {
+    "id": "example-yusen",
+    "text": "安全を優先します。",
+    "kana": "",
+    "path": "audio/examples/yusen.mp3"
+  },
+  {
+    "id": "example-zannen",
+    "text": "試合に負けて残念です。",
+    "kana": "",
+    "path": "audio/examples/zannen.mp3"
+  },
+  {
+    "id": "example-zentei",
+    "text": "その前提で議論します。",
+    "kana": "",
+    "path": "audio/examples/zentei.mp3"
+  },
+  {
+    "id": "example-zoutei",
+    "text": "利用者が増加しました。",
+    "kana": "",
+    "path": "audio/examples/zoutei.mp3"
+  },
+  {
     "id": "grammar-a-wa-b-desu",
     "text": "私は学生です。",
     "kana": "わたしはがくせいです",
@@ -520,6 +1048,24 @@
     "text": "勉強すればするほど面白くなります。",
     "kana": "べんきょうすればするほどおもしろくなります",
     "path": "audio/grammar/ba-hodo.mp3"
+  },
+  {
+    "id": "grammar-bekarazaru",
+    "text": "学生にあるべからざる行為です。",
+    "kana": "がくせいにあるべからざるこういです",
+    "path": "audio/grammar/bekarazaru.mp3"
+  },
+  {
+    "id": "grammar-beki-da",
+    "text": "約束は守るべきです。",
+    "kana": "やくそくはまもるべきです",
+    "path": "audio/grammar/beki-da.mp3"
+  },
+  {
+    "id": "grammar-dake-ni",
+    "text": "期待していただけに残念です。",
+    "kana": "きたいしていただけにざんねんです",
+    "path": "audio/grammar/dake-ni.mp3"
   },
   {
     "id": "grammar-de",
@@ -552,10 +1098,22 @@
     "path": "audio/grammar/kaneru.mp3"
   },
   {
+    "id": "grammar-kara-made",
+    "text": "九時から五時まで働きます。",
+    "kana": "くじからごじまではたらきます",
+    "path": "audio/grammar/kara-made.mp3"
+  },
+  {
     "id": "grammar-kore-sore-are",
     "text": "これは何ですか。",
     "kana": "これはなんですか",
     "path": "audio/grammar/kore-sore-are.mp3"
+  },
+  {
+    "id": "grammar-koto-ni-suru",
+    "text": "毎朝走ることにしました。",
+    "kana": "まいあさはしることにしました",
+    "path": "audio/grammar/koto-ni-suru.mp3"
   },
   {
     "id": "grammar-masu",
@@ -564,10 +1122,46 @@
     "path": "audio/grammar/masu.mp3"
   },
   {
+    "id": "grammar-mono-no",
+    "text": "準備したものの不安が残ります。",
+    "kana": "じゅんびしたもののふあんがのこります",
+    "path": "audio/grammar/mono-no.mp3"
+  },
+  {
     "id": "grammar-nagara",
     "text": "音楽を聞きながら勉強します。",
     "kana": "おんがくをききながらべんきょうします",
     "path": "audio/grammar/nagara.mp3"
+  },
+  {
+    "id": "grammar-nakereba-naranai",
+    "text": "明日までに宿題を出さなければなりません。",
+    "kana": "あしたまでにしゅくだいをださなければなりません",
+    "path": "audio/grammar/nakereba-naranai.mp3"
+  },
+  {
+    "id": "grammar-nashi-ni-wa",
+    "text": "努力なしには成功できません。",
+    "kana": "どりょくなしにはせいこうできません",
+    "path": "audio/grammar/nashi-ni-wa.mp3"
+  },
+  {
+    "id": "grammar-ni-hoka-naranai",
+    "text": "成功は努力の結果にほかなりません。",
+    "kana": "せいこうはどりょくのけっかにほかなりません",
+    "path": "audio/grammar/ni-hoka-naranai.mp3"
+  },
+  {
+    "id": "grammar-ni-imasu",
+    "text": "友達は教室にいます。",
+    "kana": "ともだちはきょうしつにいます",
+    "path": "audio/grammar/ni-imasu.mp3"
+  },
+  {
+    "id": "grammar-ni-itari",
+    "text": "議論は結論に至りました。",
+    "kana": "ぎろんはけつろんにいたりました",
+    "path": "audio/grammar/ni-itari.mp3"
   },
   {
     "id": "grammar-ni-kagiri",
@@ -582,10 +1176,40 @@
     "path": "audio/grammar/ni-katakunai.mp3"
   },
   {
+    "id": "grammar-ni-oujite",
+    "text": "経験に応じて仕事を任せます。",
+    "kana": "けいけんにおうじてしごとをまかせます",
+    "path": "audio/grammar/ni-oujite.mp3"
+  },
+  {
+    "id": "grammar-ni-shinobinai",
+    "text": "彼を責めるに忍びません。",
+    "kana": "かれをせめるにしのびません",
+    "path": "audio/grammar/ni-shinobinai.mp3"
+  },
+  {
     "id": "grammar-ni-tariru",
     "text": "信頼に足る資料です。",
     "kana": "しんらいにたるしりょうです",
     "path": "audio/grammar/ni-tariru.mp3"
+  },
+  {
+    "id": "grammar-ni-yotte",
+    "text": "国によって習慣が違います。",
+    "kana": "くにによってしゅうかんがちがいます",
+    "path": "audio/grammar/ni-yotte.mp3"
+  },
+  {
+    "id": "grammar-node",
+    "text": "雨なので出かけません。",
+    "kana": "あめなのででかけません",
+    "path": "audio/grammar/node.mp3"
+  },
+  {
+    "id": "grammar-sae",
+    "text": "名前さえ書けば大丈夫です。",
+    "kana": "なまえさえかけばだいじょうぶです",
+    "path": "audio/grammar/sae.mp3"
   },
   {
     "id": "grammar-sou-desu-hearsay",
@@ -606,16 +1230,52 @@
     "path": "audio/grammar/tame-ni.mp3"
   },
   {
+    "id": "grammar-tara",
+    "text": "駅に着いたら電話します。",
+    "kana": "えきについたらでんわします",
+    "path": "audio/grammar/tara.mp3"
+  },
+  {
     "id": "grammar-te-kudasai",
     "text": "ここに名前を書いてください。",
     "kana": "ここになまえをかいてください",
     "path": "audio/grammar/te-kudasai.mp3"
   },
   {
+    "id": "grammar-te-mo-ii",
+    "text": "ここで写真を撮ってもいいです。",
+    "kana": "ここでしゃしんをとってもいいです",
+    "path": "audio/grammar/te-mo-ii.mp3"
+  },
+  {
+    "id": "grammar-te-wa-ikenai",
+    "text": "ここでタバコを吸ってはいけません。",
+    "kana": "ここでタバコをすってはいけません",
+    "path": "audio/grammar/te-wa-ikenai.mp3"
+  },
+  {
     "id": "grammar-to-aite",
     "text": "努力と経験と相まって成果が出ました。",
     "kana": "どりょくとけいけんとあいまってせいかがでました",
     "path": "audio/grammar/to-aite.mp3"
+  },
+  {
+    "id": "grammar-to-iu",
+    "text": "これは和食という料理です。",
+    "kana": "これはわしょくというりょうりです",
+    "path": "audio/grammar/to-iu.mp3"
+  },
+  {
+    "id": "grammar-to-iwan-bakari",
+    "text": "彼は当然だと言わんばかりの顔をしました。",
+    "kana": "かれはとうぜんだといわんばかりのかおをしました",
+    "path": "audio/grammar/to-iwan-bakari.mp3"
+  },
+  {
+    "id": "grammar-tokoro-da",
+    "text": "今から出かけるところです。",
+    "kana": "いまからでかけるところです",
+    "path": "audio/grammar/tokoro-da.mp3"
   },
   {
     "id": "grammar-ue-de",
@@ -630,6 +1290,24 @@
     "path": "audio/grammar/wake-dewa-nai.mp3"
   },
   {
+    "id": "grammar-wake-ni-wa-ikanai",
+    "text": "大事な会議を休むわけにはいきません。",
+    "kana": "だいじなかいぎをやすむわけにはいきません",
+    "path": "audio/grammar/wake-ni-wa-ikanai.mp3"
+  },
+  {
+    "id": "grammar-wo-kinji-enai",
+    "text": "彼の努力に感動を禁じ得ません。",
+    "kana": "かれのどりょくにかんどうをきんじえません",
+    "path": "audio/grammar/wo-kinji-enai.mp3"
+  },
+  {
+    "id": "grammar-wo-moto-ni",
+    "text": "調査結果をもとに計画を作ります。",
+    "kana": "ちょうさけっかをもとにけいかくをつくります",
+    "path": "audio/grammar/wo-moto-ni.mp3"
+  },
+  {
     "id": "grammar-wo-yogi-naku-sareru",
     "text": "計画の変更を余儀なくされました。",
     "kana": "けいかくのへんこうをよぎなくされました",
@@ -640,6 +1318,12 @@
     "text": "パンを食べます。",
     "kana": "パンをたべます",
     "path": "audio/grammar/wo.mp3"
+  },
+  {
+    "id": "grammar-you-desu",
+    "text": "外は寒いようです。",
+    "kana": "そとはさむいようです",
+    "path": "audio/grammar/you-desu.mp3"
   },
   {
     "id": "grammar-you-ni-naru",
@@ -930,6 +1614,78 @@
     "path": "audio/kana/yu.mp3"
   },
   {
+    "id": "phrase-apartment-contract",
+    "text": "契約に必要な書類は何ですか。",
+    "kana": "けいやくにひつようなしょるいはなんですか",
+    "path": "audio/phrases/apartment-contract.mp3"
+  },
+  {
+    "id": "phrase-apartment-move",
+    "text": "来月から住むことはできますか。",
+    "kana": "らいげつからすむことはできますか",
+    "path": "audio/phrases/apartment-move.mp3"
+  },
+  {
+    "id": "phrase-apartment-rent",
+    "text": "家賃はいくらですか。",
+    "kana": "やちんはいくらですか",
+    "path": "audio/phrases/apartment-rent.mp3"
+  },
+  {
+    "id": "phrase-apartment-station",
+    "text": "駅から歩いて何分ですか。",
+    "kana": "えきからあるいてなんぷんですか",
+    "path": "audio/phrases/apartment-station.mp3"
+  },
+  {
+    "id": "phrase-apartment-think",
+    "text": "少し考えてから返事します。",
+    "kana": "すこしかんがえてからへんじします",
+    "path": "audio/phrases/apartment-think.mp3"
+  },
+  {
+    "id": "phrase-apartment-viewing",
+    "text": "部屋を見学したいです。",
+    "kana": "へやをけんがくしたいです",
+    "path": "audio/phrases/apartment-viewing.mp3"
+  },
+  {
+    "id": "phrase-briefing-demand",
+    "text": "市場の需要は拡大傾向にあります。",
+    "kana": "しじょうのじゅようはかくだいけいこうにあります",
+    "path": "audio/phrases/briefing-demand.mp3"
+  },
+  {
+    "id": "phrase-briefing-next",
+    "text": "次の段階では具体策を検討します。",
+    "kana": "つぎのだんかいではぐたいさくをけんとうします",
+    "path": "audio/phrases/briefing-next.mp3"
+  },
+  {
+    "id": "phrase-briefing-resource",
+    "text": "限られた資源をどう分配するかが課題です。",
+    "kana": "かぎられたしげんをどうぶんぱいするかがかだいです",
+    "path": "audio/phrases/briefing-resource.mp3"
+  },
+  {
+    "id": "phrase-briefing-risk",
+    "text": "短期的な利益だけでは判断できません。",
+    "kana": "たんきてきなりえきだけでははんだんできません",
+    "path": "audio/phrases/briefing-risk.mp3"
+  },
+  {
+    "id": "phrase-briefing-strategy",
+    "text": "既存事業との相乗効果が期待できます。",
+    "kana": "きそんじぎょうとのそうじょうこうかがきたいできます",
+    "path": "audio/phrases/briefing-strategy.mp3"
+  },
+  {
+    "id": "phrase-briefing-summary",
+    "text": "要点を三つに絞ってご説明します。",
+    "kana": "ようてんをみっつにしぼってごせつめいします",
+    "path": "audio/phrases/briefing-summary.mp3"
+  },
+  {
     "id": "phrase-clinic-fever",
     "text": "熱があります。",
     "kana": "ねつがあります",
@@ -1014,6 +1770,78 @@
     "path": "audio/phrases/directions-straight.mp3"
   },
   {
+    "id": "phrase-hotel-breakfast",
+    "text": "朝ご飯は何時からですか。",
+    "kana": "あさごはんはなんじからですか",
+    "path": "audio/phrases/hotel-breakfast.mp3"
+  },
+  {
+    "id": "phrase-hotel-checkout",
+    "text": "チェックアウトをお願いします。",
+    "kana": "チェックアウトをおねがいします",
+    "path": "audio/phrases/hotel-checkout.mp3"
+  },
+  {
+    "id": "phrase-hotel-key",
+    "text": "部屋の鍵をなくしました。",
+    "kana": "へやのかぎをなくしました",
+    "path": "audio/phrases/hotel-key.mp3"
+  },
+  {
+    "id": "phrase-hotel-passport",
+    "text": "パスポートを見せてください。",
+    "kana": "パスポートをみせてください",
+    "path": "audio/phrases/hotel-passport.mp3"
+  },
+  {
+    "id": "phrase-hotel-reservation",
+    "text": "予約した王です。",
+    "kana": "よやくしたおうです",
+    "path": "audio/phrases/hotel-reservation.mp3"
+  },
+  {
+    "id": "phrase-hotel-wifi",
+    "text": "ワイファイのパスワードを教えてください。",
+    "kana": "ワイファイのパスワードをおしえてください",
+    "path": "audio/phrases/hotel-wifi.mp3"
+  },
+  {
+    "id": "phrase-interview-experience",
+    "text": "接客の経験があります。",
+    "kana": "せっきゃくのけいけんがあります",
+    "path": "audio/phrases/interview-experience.mp3"
+  },
+  {
+    "id": "phrase-interview-learn",
+    "text": "新しいことを学ぶ意欲があります。",
+    "kana": "あたらしいことをまなぶいよくがあります",
+    "path": "audio/phrases/interview-learn.mp3"
+  },
+  {
+    "id": "phrase-interview-question",
+    "text": "質問してもよろしいでしょうか。",
+    "kana": "しつもんしてもよろしいでしょうか",
+    "path": "audio/phrases/interview-question.mp3"
+  },
+  {
+    "id": "phrase-interview-reason",
+    "text": "応募した理由を説明します。",
+    "kana": "おうぼしたりゆうをせつめいします",
+    "path": "audio/phrases/interview-reason.mp3"
+  },
+  {
+    "id": "phrase-interview-strength",
+    "text": "私の強みは最後まで続けることです。",
+    "kana": "わたしのつよみはさいごまでつづけることです",
+    "path": "audio/phrases/interview-strength.mp3"
+  },
+  {
+    "id": "phrase-interview-team",
+    "text": "チームで働くことが好きです。",
+    "kana": "チームではたらくことがすきです",
+    "path": "audio/phrases/interview-team.mp3"
+  },
+  {
     "id": "phrase-intro-china",
     "text": "中国から来ました。",
     "kana": "ちゅうごくからきました",
@@ -1068,6 +1896,150 @@
     "path": "audio/phrases/meeting-risk.mp3"
   },
   {
+    "id": "phrase-negotiation-agree",
+    "text": "その方針で進めましょう。",
+    "kana": "そのほうしんですすめましょう",
+    "path": "audio/phrases/negotiation-agree.mp3"
+  },
+  {
+    "id": "phrase-negotiation-benefit",
+    "text": "双方にメリットがあります。",
+    "kana": "そうほうにメリットがあります",
+    "path": "audio/phrases/negotiation-benefit.mp3"
+  },
+  {
+    "id": "phrase-negotiation-budget",
+    "text": "予算の範囲内で検討します。",
+    "kana": "よさんのはんいないでけんとうします",
+    "path": "audio/phrases/negotiation-budget.mp3"
+  },
+  {
+    "id": "phrase-negotiation-condition",
+    "text": "条件について相談させてください。",
+    "kana": "じょうけんについてそうだんさせてください",
+    "path": "audio/phrases/negotiation-condition.mp3"
+  },
+  {
+    "id": "phrase-negotiation-risk",
+    "text": "リスクを事前に共有しましょう。",
+    "kana": "リスクをじぜんにきょうゆうしましょう",
+    "path": "audio/phrases/negotiation-risk.mp3"
+  },
+  {
+    "id": "phrase-negotiation-schedule",
+    "text": "日程を調整できないでしょうか。",
+    "kana": "にっていをちょうせいできないでしょうか",
+    "path": "audio/phrases/negotiation-schedule.mp3"
+  },
+  {
+    "id": "phrase-policy-background",
+    "text": "まず制度変更の背景を整理します。",
+    "kana": "まずせいどへんこうのはいけいをせいりします",
+    "path": "audio/phrases/policy-background.mp3"
+  },
+  {
+    "id": "phrase-policy-conclusion",
+    "text": "結論を急ぐべきではありません。",
+    "kana": "けつろんをいそぐべきではありません",
+    "path": "audio/phrases/policy-conclusion.mp3"
+  },
+  {
+    "id": "phrase-policy-data",
+    "text": "客観的なデータに基づく必要があります。",
+    "kana": "きゃっかんてきなデータにもとづくひつようがあります",
+    "path": "audio/phrases/policy-data.mp3"
+  },
+  {
+    "id": "phrase-policy-impact",
+    "text": "長期的な影響は無視できません。",
+    "kana": "ちょうきてきなえいきょうはむしできません",
+    "path": "audio/phrases/policy-impact.mp3"
+  },
+  {
+    "id": "phrase-policy-principle",
+    "text": "公平性を原則として判断します。",
+    "kana": "こうへいせいをげんそくとしてはんだんします",
+    "path": "audio/phrases/policy-principle.mp3"
+  },
+  {
+    "id": "phrase-policy-stakeholder",
+    "text": "利害関係者の視点も考慮すべきです。",
+    "kana": "りがいかんけいしゃのしてんもこうりょすべきです",
+    "path": "audio/phrases/policy-stakeholder.mp3"
+  },
+  {
+    "id": "phrase-project-deadline",
+    "text": "締め切りまでに完了する見込みです。",
+    "kana": "しめきりまでにかんりょうするみこみです",
+    "path": "audio/phrases/project-deadline.mp3"
+  },
+  {
+    "id": "phrase-project-issue",
+    "text": "現在の課題は二つあります。",
+    "kana": "げんざいのかだいはふたつあります",
+    "path": "audio/phrases/project-issue.mp3"
+  },
+  {
+    "id": "phrase-project-priority",
+    "text": "安全性を優先すべきだと思います。",
+    "kana": "あんぜんせいをゆうせんすべきだとおもいます",
+    "path": "audio/phrases/project-priority.mp3"
+  },
+  {
+    "id": "phrase-project-progress",
+    "text": "進捗状況をご報告します。",
+    "kana": "しんちょくじょうきょうをごほうこくします",
+    "path": "audio/phrases/project-progress.mp3"
+  },
+  {
+    "id": "phrase-project-solution",
+    "text": "対策として次の案を考えています。",
+    "kana": "たいさくとしてつぎのあんをかんがえています",
+    "path": "audio/phrases/project-solution.mp3"
+  },
+  {
+    "id": "phrase-project-support",
+    "text": "ご協力いただけると助かります。",
+    "kana": "ごきょうりょくいただけるとたすかります",
+    "path": "audio/phrases/project-support.mp3"
+  },
+  {
+    "id": "phrase-research-definition",
+    "text": "この概念の定義を明確にしてください。",
+    "kana": "このがいねんのていぎをめいかくにしてください",
+    "path": "audio/phrases/research-definition.mp3"
+  },
+  {
+    "id": "phrase-research-evidence",
+    "text": "根拠となる資料を追加しましょう。",
+    "kana": "こんきょとなるしりょうをついかしましょう",
+    "path": "audio/phrases/research-evidence.mp3"
+  },
+  {
+    "id": "phrase-research-insight",
+    "text": "結果は新たな示唆を含んでいます。",
+    "kana": "けっかはあらたなしさをふくんでいます",
+    "path": "audio/phrases/research-insight.mp3"
+  },
+  {
+    "id": "phrase-research-method",
+    "text": "分析方法には改善の余地があります。",
+    "kana": "ぶんせきほうほうにはかいぜんのよちがあります",
+    "path": "audio/phrases/research-method.mp3"
+  },
+  {
+    "id": "phrase-research-position",
+    "text": "先行研究との位置づけが重要です。",
+    "kana": "せんこうけんきゅうとのいちづけがじゅうようです",
+    "path": "audio/phrases/research-position.mp3"
+  },
+  {
+    "id": "phrase-research-revise",
+    "text": "構成を見直したほうがよいでしょう。",
+    "kana": "こうせいをみなおしたほうがよいでしょう",
+    "path": "audio/phrases/research-revise.mp3"
+  },
+  {
     "id": "phrase-restaurant-checkout",
     "text": "お会計お願いします。",
     "kana": "おかいけいおねがいします",
@@ -1098,6 +2070,42 @@
     "path": "audio/phrases/restaurant-water.mp3"
   },
   {
+    "id": "phrase-school-group",
+    "text": "グループで練習しましょう。",
+    "kana": "グループでれんしゅうしましょう",
+    "path": "audio/phrases/school-group.mp3"
+  },
+  {
+    "id": "phrase-school-homework",
+    "text": "宿題を出すのを忘れました。",
+    "kana": "しゅくだいをだすのをわすれました",
+    "path": "audio/phrases/school-homework.mp3"
+  },
+  {
+    "id": "phrase-school-meaning",
+    "text": "この漢字の意味は何ですか。",
+    "kana": "このかんじのいみはなんですか",
+    "path": "audio/phrases/school-meaning.mp3"
+  },
+  {
+    "id": "phrase-school-question",
+    "text": "質問してもいいですか。",
+    "kana": "しつもんしてもいいですか",
+    "path": "audio/phrases/school-question.mp3"
+  },
+  {
+    "id": "phrase-school-repeat",
+    "text": "もう一度説明してください。",
+    "kana": "もういちどせつめいしてください",
+    "path": "audio/phrases/school-repeat.mp3"
+  },
+  {
+    "id": "phrase-school-test",
+    "text": "来週テストがあります。",
+    "kana": "らいしゅうテストがあります",
+    "path": "audio/phrases/school-test.mp3"
+  },
+  {
     "id": "phrase-seminar-data",
     "text": "このデータは信頼に足るものです。",
     "kana": "このデータはしんらいにたるものです",
@@ -1120,6 +2128,114 @@
     "text": "本発表では需要の変化を分析します。",
     "kana": "ほんはっぴょうではじゅようのへんかをぶんせきします",
     "path": "audio/phrases/seminar-theme.mp3"
+  },
+  {
+    "id": "phrase-shopping-card",
+    "text": "カードで払えますか。",
+    "kana": "カードではらえますか",
+    "path": "audio/phrases/shopping-card.mp3"
+  },
+  {
+    "id": "phrase-shopping-exchange",
+    "text": "交換できますか。",
+    "kana": "こうかんできますか",
+    "path": "audio/phrases/shopping-exchange.mp3"
+  },
+  {
+    "id": "phrase-shopping-expensive",
+    "text": "少し高いので考えます。",
+    "kana": "すこしたかいのでかんがえます",
+    "path": "audio/phrases/shopping-expensive.mp3"
+  },
+  {
+    "id": "phrase-shopping-receipt",
+    "text": "レシートをください。",
+    "kana": "レシートをください",
+    "path": "audio/phrases/shopping-receipt.mp3"
+  },
+  {
+    "id": "phrase-shopping-size",
+    "text": "もう少し大きいサイズはありますか。",
+    "kana": "もうすこしおおきいサイズはありますか",
+    "path": "audio/phrases/shopping-size.mp3"
+  },
+  {
+    "id": "phrase-shopping-try",
+    "text": "試着してもいいですか。",
+    "kana": "しちゃくしてもいいですか",
+    "path": "audio/phrases/shopping-try.mp3"
+  },
+  {
+    "id": "phrase-support-apology",
+    "text": "ご不便をおかけして申し訳ありません。",
+    "kana": "ごふべんをおかけしてもうしわけありません",
+    "path": "audio/phrases/support-apology.mp3"
+  },
+  {
+    "id": "phrase-support-cause",
+    "text": "原因が分かり次第ご連絡します。",
+    "kana": "げんいんがわかりしだいごれんらくします",
+    "path": "audio/phrases/support-cause.mp3"
+  },
+  {
+    "id": "phrase-support-detail",
+    "text": "詳細を確認いたします。",
+    "kana": "しょうさいをかくにんいたします",
+    "path": "audio/phrases/support-detail.mp3"
+  },
+  {
+    "id": "phrase-support-option",
+    "text": "代替案をご提案します。",
+    "kana": "だいたいあんをごていあんします",
+    "path": "audio/phrases/support-option.mp3"
+  },
+  {
+    "id": "phrase-support-refund",
+    "text": "返金の手続きを進めます。",
+    "kana": "へんきんのてつづきをすすめます",
+    "path": "audio/phrases/support-refund.mp3"
+  },
+  {
+    "id": "phrase-support-thanks",
+    "text": "ご理解いただきありがとうございます。",
+    "kana": "ごりかいいただきありがとうございます",
+    "path": "audio/phrases/support-thanks.mp3"
+  },
+  {
+    "id": "phrase-trouble-confirm",
+    "text": "状況を確認してください。",
+    "kana": "じょうきょうをかくにんしてください",
+    "path": "audio/phrases/trouble-confirm.mp3"
+  },
+  {
+    "id": "phrase-trouble-contact",
+    "text": "すぐに連絡します。",
+    "kana": "すぐにれんらくします",
+    "path": "audio/phrases/trouble-contact.mp3"
+  },
+  {
+    "id": "phrase-trouble-delay",
+    "text": "電車が遅れているようです。",
+    "kana": "でんしゃがおくれているようです",
+    "path": "audio/phrases/trouble-delay.mp3"
+  },
+  {
+    "id": "phrase-trouble-help",
+    "text": "手伝っていただけませんか。",
+    "kana": "てつだっていただけませんか",
+    "path": "audio/phrases/trouble-help.mp3"
+  },
+  {
+    "id": "phrase-trouble-lost",
+    "text": "財布をなくしてしまいました。",
+    "kana": "さいふをなくしてしまいました",
+    "path": "audio/phrases/trouble-lost.mp3"
+  },
+  {
+    "id": "phrase-trouble-police",
+    "text": "近くの交番はどこですか。",
+    "kana": "ちかくのこうばんはどこですか",
+    "path": "audio/phrases/trouble-police.mp3"
   },
   {
     "id": "phrase-workplace-confirm",
@@ -1152,6 +2268,12 @@
     "path": "audio/words/anata.mp3"
   },
   {
+    "id": "word-anzen",
+    "text": "安全",
+    "kana": "あんぜん",
+    "path": "audio/words/anzen.mp3"
+  },
+  {
     "id": "word-arigatou",
     "text": "ありがとう",
     "kana": "ありがとう",
@@ -1182,6 +2304,24 @@
     "path": "audio/words/benkyou.mp3"
   },
   {
+    "id": "word-bunmei",
+    "text": "文化",
+    "kana": "ぶんか",
+    "path": "audio/words/bunmei.mp3"
+  },
+  {
+    "id": "word-bunpai",
+    "text": "分配",
+    "kana": "ぶんぱい",
+    "path": "audio/words/bunpai.mp3"
+  },
+  {
+    "id": "word-bunpou",
+    "text": "文法",
+    "kana": "ぶんぽう",
+    "path": "audio/words/bunpou.mp3"
+  },
+  {
     "id": "word-bunseki",
     "text": "分析",
     "kana": "ぶんせき",
@@ -1206,16 +2346,46 @@
     "path": "audio/words/chizu.mp3"
   },
   {
+    "id": "word-chousa",
+    "text": "調査",
+    "kana": "ちょうさ",
+    "path": "audio/words/chousa.mp3"
+  },
+  {
     "id": "word-densha",
     "text": "電車",
     "kana": "でんしゃ",
     "path": "audio/words/densha.mp3"
   },
   {
+    "id": "word-doryoku",
+    "text": "努力",
+    "kana": "どりょく",
+    "path": "audio/words/doryoku.mp3"
+  },
+  {
+    "id": "word-eikyou",
+    "text": "影響",
+    "kana": "えいきょう",
+    "path": "audio/words/eikyou.mp3"
+  },
+  {
     "id": "word-eki",
     "text": "駅",
     "kana": "えき",
     "path": "audio/words/eki.mp3"
+  },
+  {
+    "id": "word-fuan",
+    "text": "不安",
+    "kana": "ふあん",
+    "path": "audio/words/fuan.mp3"
+  },
+  {
+    "id": "word-futsuu",
+    "text": "普通",
+    "kana": "ふつう",
+    "path": "audio/words/futsuu.mp3"
   },
   {
     "id": "word-gainen",
@@ -1236,10 +2406,28 @@
     "path": "audio/words/genin.mp3"
   },
   {
+    "id": "word-genshou",
+    "text": "減少",
+    "kana": "げんしょう",
+    "path": "audio/words/genshou.mp3"
+  },
+  {
+    "id": "word-gensoku",
+    "text": "原則",
+    "kana": "げんそく",
+    "path": "audio/words/gensoku.mp3"
+  },
+  {
     "id": "word-gohan",
     "text": "ご飯",
     "kana": "ごはん",
     "path": "audio/words/gohan.mp3"
+  },
+  {
+    "id": "word-gutaiteki",
+    "text": "具体的",
+    "kana": "ぐたいてき",
+    "path": "audio/words/gutaiteki.mp3"
   },
   {
     "id": "word-hai",
@@ -1248,10 +2436,22 @@
     "path": "audio/words/hai.mp3"
   },
   {
+    "id": "word-haikei",
+    "text": "背景",
+    "kana": "はいけい",
+    "path": "audio/words/haikei.mp3"
+  },
+  {
     "id": "word-hatsuon",
     "text": "発音",
     "kana": "はつおん",
     "path": "audio/words/hatsuon.mp3"
+  },
+  {
+    "id": "word-henji",
+    "text": "返事",
+    "kana": "へんじ",
+    "path": "audio/words/henji.mp3"
   },
   {
     "id": "word-henka",
@@ -1266,6 +2466,18 @@
     "path": "audio/words/hidari.mp3"
   },
   {
+    "id": "word-hihan",
+    "text": "批判",
+    "kana": "ひはん",
+    "path": "audio/words/hihan.mp3"
+  },
+  {
+    "id": "word-himoduku",
+    "text": "紐づく",
+    "kana": "ひもづく",
+    "path": "audio/words/himoduku.mp3"
+  },
+  {
     "id": "word-hon",
     "text": "本",
     "kana": "ほん",
@@ -1278,10 +2490,52 @@
     "path": "audio/words/hoteru.mp3"
   },
   {
+    "id": "word-houhou",
+    "text": "方法",
+    "kana": "ほうほう",
+    "path": "audio/words/houhou.mp3"
+  },
+  {
+    "id": "word-houkoku",
+    "text": "報告",
+    "kana": "ほうこく",
+    "path": "audio/words/houkoku.mp3"
+  },
+  {
+    "id": "word-houshin",
+    "text": "方針",
+    "kana": "ほうしん",
+    "path": "audio/words/houshin.mp3"
+  },
+  {
+    "id": "word-hyougen",
+    "text": "表現",
+    "kana": "ひょうげん",
+    "path": "audio/words/hyougen.mp3"
+  },
+  {
+    "id": "word-hyouka",
+    "text": "評価",
+    "kana": "ひょうか",
+    "path": "audio/words/hyouka.mp3"
+  },
+  {
+    "id": "word-ichizuke",
+    "text": "位置づけ",
+    "kana": "いちづけ",
+    "path": "audio/words/ichizuke.mp3"
+  },
+  {
     "id": "word-iie",
     "text": "いいえ",
     "kana": "いいえ",
     "path": "audio/words/iie.mp3"
+  },
+  {
+    "id": "word-iji",
+    "text": "維持",
+    "kana": "いじ",
+    "path": "audio/words/iji.mp3"
   },
   {
     "id": "word-ima",
@@ -1290,10 +2544,22 @@
     "path": "audio/words/ima.mp3"
   },
   {
+    "id": "word-imi",
+    "text": "意味",
+    "kana": "いみ",
+    "path": "audio/words/imi.mp3"
+  },
+  {
     "id": "word-ishiki",
     "text": "意識",
     "kana": "いしき",
     "path": "audio/words/ishiki.mp3"
+  },
+  {
+    "id": "word-jikanwari",
+    "text": "時間割",
+    "kana": "じかんわり",
+    "path": "audio/words/jikanwari.mp3"
   },
   {
     "id": "word-jisho",
@@ -1306,6 +2572,12 @@
     "text": "実際",
     "kana": "じっさい",
     "path": "audio/words/jissai.mp3"
+  },
+  {
+    "id": "word-jizoku",
+    "text": "持続",
+    "kana": "じぞく",
+    "path": "audio/words/jizoku.mp3"
   },
   {
     "id": "word-jouhou",
@@ -1326,6 +2598,18 @@
     "path": "audio/words/juyou.mp3"
   },
   {
+    "id": "word-juyoudo",
+    "text": "重要度",
+    "kana": "じゅうようど",
+    "path": "audio/words/juyoudo.mp3"
+  },
+  {
+    "id": "word-jyouken",
+    "text": "条件",
+    "kana": "じょうけん",
+    "path": "audio/words/jyouken.mp3"
+  },
+  {
     "id": "word-kachi",
     "text": "価値",
     "kana": "かち",
@@ -1336,6 +2620,12 @@
     "text": "課題",
     "kana": "かだい",
     "path": "audio/words/kadai.mp3"
+  },
+  {
+    "id": "word-kaigi",
+    "text": "会議",
+    "kana": "かいぎ",
+    "path": "audio/words/kaigi.mp3"
   },
   {
     "id": "word-kaiketsu",
@@ -1356,10 +2646,40 @@
     "path": "audio/words/kaisha.mp3"
   },
   {
+    "id": "word-kaizen",
+    "text": "改善",
+    "kana": "かいぜん",
+    "path": "audio/words/kaizen.mp3"
+  },
+  {
+    "id": "word-kakudai",
+    "text": "拡大",
+    "kana": "かくだい",
+    "path": "audio/words/kakudai.mp3"
+  },
+  {
     "id": "word-kakunin",
     "text": "確認",
     "kana": "かくにん",
     "path": "audio/words/kakunin.mp3"
+  },
+  {
+    "id": "word-kakushin",
+    "text": "革新",
+    "kana": "かくしん",
+    "path": "audio/words/kakushin.mp3"
+  },
+  {
+    "id": "word-kandou",
+    "text": "感動",
+    "kana": "かんどう",
+    "path": "audio/words/kandou.mp3"
+  },
+  {
+    "id": "word-kanji",
+    "text": "漢字",
+    "kana": "かんじ",
+    "path": "audio/words/kanji.mp3"
   },
   {
     "id": "word-kankei",
@@ -1372,6 +2692,18 @@
     "text": "環境",
     "kana": "かんきょう",
     "path": "audio/words/kankyou.mp3"
+  },
+  {
+    "id": "word-kanousei",
+    "text": "可能性",
+    "kana": "かのうせい",
+    "path": "audio/words/kanousei.mp3"
+  },
+  {
+    "id": "word-kansou",
+    "text": "感想",
+    "kana": "かんそう",
+    "path": "audio/words/kansou.mp3"
   },
   {
     "id": "word-kantan",
@@ -1392,16 +2724,64 @@
     "path": "audio/words/keiken.mp3"
   },
   {
+    "id": "word-keiyaku",
+    "text": "契約",
+    "kana": "けいやく",
+    "path": "audio/words/keiyaku.mp3"
+  },
+  {
+    "id": "word-kekka",
+    "text": "結果",
+    "kana": "けっか",
+    "path": "audio/words/kekka.mp3"
+  },
+  {
+    "id": "word-kencho",
+    "text": "顕著",
+    "kana": "けんちょ",
+    "path": "audio/words/kencho.mp3"
+  },
+  {
+    "id": "word-kentou",
+    "text": "検討",
+    "kana": "けんとう",
+    "path": "audio/words/kentou.mp3"
+  },
+  {
     "id": "word-kibun",
     "text": "気分",
     "kana": "きぶん",
     "path": "audio/words/kibun.mp3"
   },
   {
+    "id": "word-kijun",
+    "text": "基準",
+    "kana": "きじゅん",
+    "path": "audio/words/kijun.mp3"
+  },
+  {
+    "id": "word-kiken",
+    "text": "危険",
+    "kana": "きけん",
+    "path": "audio/words/kiken.mp3"
+  },
+  {
     "id": "word-kinou",
     "text": "昨日",
     "kana": "きのう",
     "path": "audio/words/kinou.mp3"
+  },
+  {
+    "id": "word-kippu",
+    "text": "切符",
+    "kana": "きっぷ",
+    "path": "audio/words/kippu.mp3"
+  },
+  {
+    "id": "word-kitei",
+    "text": "規定",
+    "kana": "きてい",
+    "path": "audio/words/kitei.mp3"
   },
   {
     "id": "word-konbanwa",
@@ -1428,10 +2808,28 @@
     "path": "audio/words/koohii.mp3"
   },
   {
+    "id": "word-kouho",
+    "text": "候補",
+    "kana": "こうほ",
+    "path": "audio/words/kouho.mp3"
+  },
+  {
     "id": "word-kouka",
     "text": "効果",
     "kana": "こうか",
     "path": "audio/words/kouka.mp3"
+  },
+  {
+    "id": "word-kouken",
+    "text": "貢献",
+    "kana": "こうけん",
+    "path": "audio/words/kouken.mp3"
+  },
+  {
+    "id": "word-kouritsu",
+    "text": "効率",
+    "kana": "こうりつ",
+    "path": "audio/words/kouritsu.mp3"
   },
   {
     "id": "word-kousatsu",
@@ -1440,10 +2838,22 @@
     "path": "audio/words/kousatsu.mp3"
   },
   {
+    "id": "word-kousoku",
+    "text": "拘束",
+    "kana": "こうそく",
+    "path": "audio/words/kousoku.mp3"
+  },
+  {
     "id": "word-kouzou",
     "text": "構造",
     "kana": "こうぞう",
     "path": "audio/words/kouzou.mp3"
+  },
+  {
+    "id": "word-koyou",
+    "text": "雇用",
+    "kana": "こよう",
+    "path": "audio/words/koyou.mp3"
   },
   {
     "id": "word-kuukou",
@@ -1488,16 +2898,40 @@
     "path": "audio/words/mokuteki.mp3"
   },
   {
+    "id": "word-mondai",
+    "text": "問題",
+    "kana": "もんだい",
+    "path": "audio/words/mondai.mp3"
+  },
+  {
     "id": "word-muzukashii",
     "text": "難しい",
     "kana": "むずかしい",
     "path": "audio/words/muzukashii.mp3"
   },
   {
+    "id": "word-nattoku",
+    "text": "納得",
+    "kana": "なっとく",
+    "path": "audio/words/nattoku.mp3"
+  },
+  {
     "id": "word-nihongo",
     "text": "日本語",
     "kana": "にほんご",
     "path": "audio/words/nihongo.mp3"
+  },
+  {
+    "id": "word-nimotsu",
+    "text": "荷物",
+    "kana": "にもつ",
+    "path": "audio/words/nimotsu.mp3"
+  },
+  {
+    "id": "word-norikae",
+    "text": "乗り換え",
+    "kana": "のりかえ",
+    "path": "audio/words/norikae.mp3"
   },
   {
     "id": "word-ocha",
@@ -1542,6 +2976,12 @@
     "path": "audio/words/raamen.mp3"
   },
   {
+    "id": "word-renkei",
+    "text": "連携",
+    "kana": "れんけい",
+    "path": "audio/words/renkei.mp3"
+  },
+  {
     "id": "word-renraku",
     "text": "連絡",
     "kana": "れんらく",
@@ -1552,6 +2992,54 @@
     "text": "練習",
     "kana": "れんしゅう",
     "path": "audio/words/renshuu.mp3"
+  },
+  {
+    "id": "word-rikai",
+    "text": "利害",
+    "kana": "りがい",
+    "path": "audio/words/rikai.mp3"
+  },
+  {
+    "id": "word-riyuu",
+    "text": "理由",
+    "kana": "りゆう",
+    "path": "audio/words/riyuu.mp3"
+  },
+  {
+    "id": "word-ronri",
+    "text": "論理",
+    "kana": "ろんり",
+    "path": "audio/words/ronri.mp3"
+  },
+  {
+    "id": "word-ryougae",
+    "text": "両替",
+    "kana": "りょうがえ",
+    "path": "audio/words/ryougae.mp3"
+  },
+  {
+    "id": "word-sairyou",
+    "text": "裁量",
+    "kana": "さいりょう",
+    "path": "audio/words/sairyou.mp3"
+  },
+  {
+    "id": "word-seichou",
+    "text": "成長",
+    "kana": "せいちょう",
+    "path": "audio/words/seichou.mp3"
+  },
+  {
+    "id": "word-seido",
+    "text": "制度",
+    "kana": "せいど",
+    "path": "audio/words/seido.mp3"
+  },
+  {
+    "id": "word-seikaku",
+    "text": "性格",
+    "kana": "せいかく",
+    "path": "audio/words/seikaku.mp3"
   },
   {
     "id": "word-seikatsu",
@@ -1584,16 +3072,100 @@
     "path": "audio/words/setsumei.mp3"
   },
   {
+    "id": "word-setsuyaku",
+    "text": "節約",
+    "kana": "せつやく",
+    "path": "audio/words/setsuyaku.mp3"
+  },
+  {
+    "id": "word-shakai",
+    "text": "社会",
+    "kana": "しゃかい",
+    "path": "audio/words/shakai.mp3"
+  },
+  {
+    "id": "word-shigen",
+    "text": "資源",
+    "kana": "しげん",
+    "path": "audio/words/shigen.mp3"
+  },
+  {
+    "id": "word-shigoto",
+    "text": "仕事",
+    "kana": "しごと",
+    "path": "audio/words/shigoto.mp3"
+  },
+  {
+    "id": "word-shisa",
+    "text": "示唆",
+    "kana": "しさ",
+    "path": "audio/words/shisa.mp3"
+  },
+  {
     "id": "word-shiten",
     "text": "視点",
     "kana": "してん",
     "path": "audio/words/shiten.mp3"
   },
   {
+    "id": "word-shoukai",
+    "text": "紹介",
+    "kana": "しょうかい",
+    "path": "audio/words/shoukai.mp3"
+  },
+  {
+    "id": "word-shourai",
+    "text": "将来",
+    "kana": "しょうらい",
+    "path": "audio/words/shourai.mp3"
+  },
+  {
+    "id": "word-shousai",
+    "text": "詳細",
+    "kana": "しょうさい",
+    "path": "audio/words/shousai.mp3"
+  },
+  {
+    "id": "word-shuchou",
+    "text": "主張",
+    "kana": "しゅちょう",
+    "path": "audio/words/shuchou.mp3"
+  },
+  {
+    "id": "word-shukudai",
+    "text": "宿題",
+    "kana": "しゅくだい",
+    "path": "audio/words/shukudai.mp3"
+  },
+  {
     "id": "word-sokushin",
     "text": "促進",
     "kana": "そくしん",
     "path": "audio/words/sokushin.mp3"
+  },
+  {
+    "id": "word-soshiki",
+    "text": "組織",
+    "kana": "そしき",
+    "path": "audio/words/soshiki.mp3"
+  },
+  {
+    "id": "word-soudan",
+    "text": "相談",
+    "kana": "そうだん",
+    "path": "audio/words/soudan.mp3"
+  },
+  {
+    "id": "word-sougo",
+    "text": "相互",
+    "kana": "そうご",
+    "path": "audio/words/sougo.mp3"
+  },
+  {
+    "id": "word-sousai",
+    "text": "相殺",
+    "kana": "そうさい",
+    "path": "audio/words/sousai.mp3"
   },
   {
     "id": "word-sumimasen",
@@ -1608,6 +3180,18 @@
     "path": "audio/words/sushi.mp3"
   },
   {
+    "id": "word-taiou",
+    "text": "対応",
+    "kana": "たいおう",
+    "path": "audio/words/taiou.mp3"
+  },
+  {
+    "id": "word-taisaku",
+    "text": "対策",
+    "kana": "たいさく",
+    "path": "audio/words/taisaku.mp3"
+  },
+  {
     "id": "word-takai",
     "text": "高い",
     "kana": "たかい",
@@ -1620,16 +3204,46 @@
     "path": "audio/words/takushii.mp3"
   },
   {
+    "id": "word-teigi",
+    "text": "定義",
+    "kana": "ていぎ",
+    "path": "audio/words/teigi.mp3"
+  },
+  {
     "id": "word-toire",
     "text": "トイレ",
     "kana": "トイレ",
     "path": "audio/words/toire.mp3"
   },
   {
+    "id": "word-tokubetsu",
+    "text": "特別",
+    "kana": "とくべつ",
+    "path": "audio/words/tokubetsu.mp3"
+  },
+  {
     "id": "word-tomodachi",
     "text": "友達",
     "kana": "ともだち",
     "path": "audio/words/tomodachi.mp3"
+  },
+  {
+    "id": "word-tougou",
+    "text": "統合",
+    "kana": "とうごう",
+    "path": "audio/words/tougou.mp3"
+  },
+  {
+    "id": "word-toushi",
+    "text": "投資",
+    "kana": "とうし",
+    "path": "audio/words/toushi.mp3"
+  },
+  {
+    "id": "word-uketsuke",
+    "text": "受付",
+    "kana": "うけつけ",
+    "path": "audio/words/uketsuke.mp3"
   },
   {
     "id": "word-ushiro",
@@ -1654,5 +3268,35 @@
     "text": "安い",
     "kana": "やすい",
     "path": "audio/words/yasui.mp3"
+  },
+  {
+    "id": "word-yoyaku",
+    "text": "予約",
+    "kana": "よやく",
+    "path": "audio/words/yoyaku.mp3"
+  },
+  {
+    "id": "word-yusen",
+    "text": "優先",
+    "kana": "ゆうせん",
+    "path": "audio/words/yusen.mp3"
+  },
+  {
+    "id": "word-zannen",
+    "text": "残念",
+    "kana": "ざんねん",
+    "path": "audio/words/zannen.mp3"
+  },
+  {
+    "id": "word-zentei",
+    "text": "前提",
+    "kana": "ぜんてい",
+    "path": "audio/words/zentei.mp3"
+  },
+  {
+    "id": "word-zoutei",
+    "text": "増加",
+    "kana": "ぞうか",
+    "path": "audio/words/zoutei.mp3"
   }
 ]

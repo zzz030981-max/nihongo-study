@@ -59,9 +59,10 @@ describe('learning content', () => {
     expect(learningLevels).toEqual(['N5', 'N4', 'N3', 'N2', 'N1'])
 
     for (const level of learningLevels) {
-      expect(studyWords.filter((word) => word.level === level).length, `${level} words`).toBeGreaterThanOrEqual(8)
-      expect(grammarCards.filter((card) => card.level === level).length, `${level} grammar`).toBeGreaterThanOrEqual(4)
-      expect(phraseScenarios.some((scenario) => scenario.level === level), `${level} phrases`).toBe(true)
+      expect(studyWords.filter((word) => word.level === level).length, `${level} words`).toBeGreaterThanOrEqual(30)
+      expect(grammarCards.filter((card) => card.level === level).length, `${level} grammar`).toBeGreaterThanOrEqual(10)
+      expect(phraseScenarios.filter((scenario) => scenario.level === level).length, `${level} scenarios`).toBeGreaterThanOrEqual(4)
+      expect(phraseScenarios.filter((scenario) => scenario.level === level).flatMap((scenario) => scenario.phrases).length, `${level} phrase lines`).toBeGreaterThanOrEqual(20)
     }
   })
 
