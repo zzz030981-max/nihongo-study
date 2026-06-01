@@ -8,9 +8,14 @@ import {
   GraduationCap,
   Headphones,
   Languages,
+  Layers,
   ListChecks,
+  Moon,
+  Plus,
   Search,
+  Sparkles,
   Star,
+  Sun,
   Trophy,
   Volume2,
 } from 'lucide-react'
@@ -19,13 +24,16 @@ import {
   dailyPlan,
   grammarCards,
   kanaRows,
+  learningLevels,
   phraseScenarios,
   studyWords,
+  type JLPTLevel,
   type StudyWord,
 } from './data/learningContent'
 import {
   canPlayAudio,
   getAudioUrl,
+  getReviewWords,
   makeQuiz,
   type QuizMode,
   type QuizQuestion,
@@ -37,16 +45,23 @@ type StoredProgress = {
   favoriteWords: string[]
   completedTasks: number[]
   mistakes: string[]
+  reviewQueue: string[]
   bestScore: number
+  activeLevel: JLPTLevel
+  flashcardSeen: string[]
 }
 
-const STORAGE_KEY = 'nihongo-study-progress-v1'
+const STORAGE_KEY = 'nihongo-study-progress-v2'
+const LEGACY_STORAGE_KEY = 'nihongo-study-progress-v1'
+const THEME_KEY = 'nihongo-study-theme'
 
 const navItems = [
   { id: 'dictionary', label: '词库', icon: Search },
+  { id: 'vocabulary', label: '词汇', icon: Layers },
   { id: 'kana', label: '五十音', icon: Languages },
   { id: 'grammar', label: '语法', icon: BookOpen },
   { id: 'phrases', label: '会话', icon: Headphones },
+  { id: 'flashcards', label: '闪卡', icon: Sparkles },
   { id: 'review', label: '复习', icon: ListChecks },
   { id: 'quiz', label: '自测', icon: Trophy },
   { id: 'plan', label: '计划', icon: ClipboardList },
@@ -57,22 +72,32 @@ const initialProgress: StoredProgress = {
   favoriteWords: [],
   completedTasks: [],
   mistakes: [],
+  reviewQueue: [],
   bestScore: 0,
+  activeLevel: 'N5',
+  flashcardSeen: [],
 }
 
 function readProgress(): StoredProgress {
   try {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}')
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_STORAGE_KEY) || '{}')
     return {
       masteredWords: Array.isArray(saved.masteredWords) ? saved.masteredWords : [],
       favoriteWords: Array.isArray(saved.favoriteWords) ? saved.favoriteWords : [],
       completedTasks: Array.isArray(saved.completedTasks) ? saved.completedTasks : [],
       mistakes: Array.isArray(saved.mistakes) ? saved.mistakes : [],
+      reviewQueue: Array.isArray(saved.reviewQueue) ? saved.reviewQueue : [],
       bestScore: Number.isFinite(saved.bestScore) ? saved.bestScore : 0,
+      activeLevel: learningLevels.includes(saved.activeLevel) ? saved.activeLevel : 'N5',
+      flashcardSeen: Array.isArray(saved.flashcardSeen) ? saved.flashcardSeen : [],
     }
   } catch {
     return initialProgress
   }
+}
+
+function readTheme() {
+  return localStorage.getItem(THEME_KEY) === 'dark' ? 'dark' : 'light'
 }
 
 function playAudio(audioId?: string) {
@@ -83,6 +108,10 @@ function playAudio(audioId?: string) {
 
 function toggleListItem(items: string[], value: string) {
   return items.includes(value) ? items.filter((item) => item !== value) : [...items, value]
+}
+
+function uniqueAppend(items: string[], value: string) {
+  return items.includes(value) ? items : [...items, value]
 }
 
 function ProgressRing({ value }: { value: number }) {
@@ -105,7 +134,7 @@ function Section({
   children: React.ReactNode
 }) {
   return (
-    <section id={id} className="section-panel reveal">
+    <section id={id} className="section-panel reveal" data-section>
       <div className="section-heading">
         <div>
           <p className="section-kicker">{navItems.find((item) => item.id === id)?.label ?? 'Study'}</p>
@@ -118,70 +147,24 @@ function Section({
   )
 }
 
-function AudioButton({ audioId, label }: { audioId?: string; label: string }) {
+function AudioButton({ audioId, label, className = 'icon-button' }: { audioId?: string; label: string; className?: string }) {
   if (!canPlayAudio(audioId)) return null
   return (
-    <button className="icon-button" type="button" aria-label={`播放 ${label}`} onClick={() => playAudio(audioId)}>
+    <button className={className} type="button" aria-label={`播放 ${label}`} onClick={() => playAudio(audioId)}>
       <Volume2 size={17} />
     </button>
   )
 }
 
-function Dictionary({
-  masteredWords,
-  favoriteWords,
-  onToggleMaster,
-  onToggleFavorite,
-}: {
-  masteredWords: string[]
-  favoriteWords: string[]
-  onToggleMaster: (id: string) => void
-  onToggleFavorite: (id: string) => void
-}) {
-  const [query, setQuery] = useState('')
-  const [category, setCategory] = useState('全部')
-  const categories = useMemo(() => ['全部', ...Array.from(new Set(studyWords.map((word) => word.category)))], [])
-  const filtered = useMemo(() => {
-    const keyword = query.trim().toLowerCase()
-    return studyWords.filter((word) => {
-      const inCategory = category === '全部' || word.category === category
-      const searchable = `${word.jp} ${word.kana} ${word.romaji} ${word.cn}`.toLowerCase()
-      return inCategory && (!keyword || searchable.includes(keyword))
-    })
-  }, [category, query])
-
+function LevelTabs({ value, onChange }: { value: JLPTLevel; onChange: (level: JLPTLevel) => void }) {
   return (
-    <Section id="dictionary" title="本地 N5 词库" desc="搜索日文、假名、罗马音或中文；每个词和例句都连接固定音频。">
-      <div className="tool-row">
-        <div className="search-box">
-          <Search size={18} />
-          <input
-            placeholder="搜索日文、假名、罗马音或中文"
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-          />
-        </div>
-        <div className="segments">
-          {categories.slice(0, 8).map((item) => (
-            <button className={item === category ? 'active' : ''} key={item} type="button" onClick={() => setCategory(item)}>
-              {item}
-            </button>
-          ))}
-        </div>
-      </div>
-      <div className="word-list">
-        {filtered.slice(0, 36).map((word) => (
-          <WordRow
-            favorite={favoriteWords.includes(word.id)}
-            key={word.id}
-            mastered={masteredWords.includes(word.id)}
-            onToggleFavorite={onToggleFavorite}
-            onToggleMaster={onToggleMaster}
-            word={word}
-          />
-        ))}
-      </div>
-    </Section>
+    <div className="level-tabs" aria-label="等级筛选">
+      {learningLevels.map((level) => (
+        <button className={level === value ? 'active' : ''} key={level} type="button" onClick={() => onChange(level)}>
+          {level}
+        </button>
+      ))}
+    </div>
   )
 }
 
@@ -189,14 +172,18 @@ function WordRow({
   word,
   mastered,
   favorite,
+  inReview,
   onToggleMaster,
   onToggleFavorite,
+  onAddReview,
 }: {
   word: StudyWord
   mastered: boolean
   favorite: boolean
+  inReview: boolean
   onToggleMaster: (id: string) => void
   onToggleFavorite: (id: string) => void
+  onAddReview: (id: string) => void
 }) {
   return (
     <article className={`word-row ${mastered ? 'is-mastered' : ''}`}>
@@ -209,7 +196,7 @@ function WordRow({
           </div>
           <p>{word.romaji} · {word.cn}</p>
         </div>
-        <span className="category-chip">{word.category}</span>
+        <span className="category-chip">{word.level} · {word.category}</span>
       </div>
       <div className="example-line">
         <span>{word.example}</span>
@@ -223,8 +210,131 @@ function WordRow({
         <button className={mastered ? 'text-action active' : 'text-action'} type="button" onClick={() => onToggleMaster(word.id)}>
           <Check size={15} /> 已掌握
         </button>
+        <button className={inReview ? 'text-action active' : 'text-action'} type="button" onClick={() => onAddReview(word.id)}>
+          <Plus size={15} /> {inReview ? '已在复习' : '加入复习'}
+        </button>
       </div>
     </article>
+  )
+}
+
+function Dictionary({
+  level,
+  masteredWords,
+  favoriteWords,
+  reviewQueue,
+  onLevelChange,
+  onToggleMaster,
+  onToggleFavorite,
+  onAddReview,
+}: {
+  level: JLPTLevel
+  masteredWords: string[]
+  favoriteWords: string[]
+  reviewQueue: string[]
+  onLevelChange: (level: JLPTLevel) => void
+  onToggleMaster: (id: string) => void
+  onToggleFavorite: (id: string) => void
+  onAddReview: (id: string) => void
+}) {
+  const [query, setQuery] = useState('')
+  const [category, setCategory] = useState('全部')
+  const categories = useMemo(() => ['全部', ...Array.from(new Set(studyWords.filter((word) => word.level === level).map((word) => word.category)))], [level])
+  const activeCategory = categories.includes(category) ? category : '全部'
+  const filtered = useMemo(() => {
+    const keyword = query.trim().toLowerCase()
+    return studyWords.filter((word) => {
+      const inCategory = activeCategory === '全部' || word.category === activeCategory
+      const searchable = `${word.jp} ${word.kana} ${word.romaji} ${word.cn} ${word.level}`.toLowerCase()
+      return word.level === level && inCategory && (!keyword || searchable.includes(keyword))
+    })
+  }, [activeCategory, level, query])
+
+  return (
+    <Section id="dictionary" title={`${level} 本地词库`} desc="像翻译软件一样搜索日文、假名、罗马音或中文；发音全部来自固定音频文件。">
+      <div className="tool-stack">
+        <LevelTabs value={level} onChange={onLevelChange} />
+        <div className="tool-row">
+          <div className="search-box">
+            <Search size={18} />
+            <input
+              placeholder="搜索日文、假名、罗马音或中文"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+            />
+          </div>
+          <div className="segments">
+            {categories.slice(0, 9).map((item) => (
+              <button className={item === activeCategory ? 'active' : ''} key={item} type="button" onClick={() => setCategory(item)}>
+                {item}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="word-list">
+        {filtered.slice(0, 40).map((word) => (
+          <WordRow
+            favorite={favoriteWords.includes(word.id)}
+            inReview={reviewQueue.includes(word.id)}
+            key={word.id}
+            mastered={masteredWords.includes(word.id)}
+            onAddReview={onAddReview}
+            onToggleFavorite={onToggleFavorite}
+            onToggleMaster={onToggleMaster}
+            word={word}
+          />
+        ))}
+      </div>
+    </Section>
+  )
+}
+
+function VocabularyTrainer({
+  level,
+  masteredWords,
+  favoriteWords,
+  reviewQueue,
+  onLevelChange,
+  onToggleMaster,
+  onToggleFavorite,
+  onAddReview,
+}: {
+  level: JLPTLevel
+  masteredWords: string[]
+  favoriteWords: string[]
+  reviewQueue: string[]
+  onLevelChange: (level: JLPTLevel) => void
+  onToggleMaster: (id: string) => void
+  onToggleFavorite: (id: string) => void
+  onAddReview: (id: string) => void
+}) {
+  const words = studyWords.filter((word) => word.level === level)
+  const categories = Array.from(new Set(words.map((word) => word.category)))
+
+  return (
+    <Section id="vocabulary" title={`${level} 词汇训练`} desc="这是独立的词汇训练界面，适合按等级和分类集中记忆，不会自动发音。">
+      <LevelTabs value={level} onChange={onLevelChange} />
+      <div className="vocab-columns">
+        {categories.map((category) => (
+          <div className="vocab-group" key={category}>
+            <h3>{category}</h3>
+            {words.filter((word) => word.category === category).slice(0, 5).map((word) => (
+              <WordRow
+                favorite={favoriteWords.includes(word.id)}
+                inReview={reviewQueue.includes(word.id)}
+                key={word.id}
+                mastered={masteredWords.includes(word.id)}
+                onAddReview={onAddReview}
+                onToggleFavorite={onToggleFavorite}
+                onToggleMaster={onToggleMaster}
+                word={word}
+              />
+            ))}
+          </div>
+        ))}
+      </div>
+    </Section>
   )
 }
 
@@ -254,20 +364,23 @@ function KanaTable() {
   )
 }
 
-function Grammar() {
+function Grammar({ level, onLevelChange }: { level: JLPTLevel; onLevelChange: (level: JLPTLevel) => void }) {
+  const cards = grammarCards.filter((card) => card.level === level)
   return (
-    <Section id="grammar" title="N5 核心语法" desc="每张卡只保留一个句型、一个例句、一个使用提醒，适合零基础反复看。">
+    <Section id="grammar" title={`${level} 核心语法`} desc="每张卡保留句型、解释、例句、假名读音和使用提醒。">
+      <LevelTabs value={level} onChange={onLevelChange} />
       <div className="grammar-grid">
-        {grammarCards.map((card) => (
+        {cards.map((card) => (
           <article className="grammar-card" key={card.id}>
             <div className="card-top">
-              <span>{card.level}</span>
+              <span>{card.level} · {card.topic}</span>
               <AudioButton audioId={card.audioId} label={card.title} />
             </div>
             <h3>{card.title}</h3>
             <p>{card.meaning}</p>
             <button className="example-card" type="button" onClick={() => playAudio(card.audioId)}>
               <strong>{card.pattern}</strong>
+              <small>{card.exampleKana}</small>
               <span>{card.translation}</span>
             </button>
             <small>{card.tip}</small>
@@ -278,29 +391,32 @@ function Grammar() {
   )
 }
 
-function Phrases() {
-  const [activeScene, setActiveScene] = useState(phraseScenarios[0].id)
-  const current = phraseScenarios.find((scenario) => scenario.id === activeScene) ?? phraseScenarios[0]
+function Phrases({ level, onLevelChange }: { level: JLPTLevel; onLevelChange: (level: JLPTLevel) => void }) {
+  const scenarios = phraseScenarios.filter((scenario) => scenario.level === level)
+  const [activeScene, setActiveScene] = useState(scenarios[0]?.id ?? '')
+  const current = scenarios.find((scenario) => scenario.id === activeScene) ?? scenarios[0]
+
   return (
-    <Section id="phrases" title="场景会话跟读" desc="用真实会话短句练开口，手机微信里也能一键播放。">
+    <Section id="phrases" title={`${level} 场景会话`} desc="从入门寒暄到会议、发表，按等级逐步练真实表达；点击发音键才播放。">
+      <LevelTabs value={level} onChange={onLevelChange} />
       <div className="phrase-layout">
         <div className="scene-tabs">
-          {phraseScenarios.map((scenario) => (
-            <button className={scenario.id === activeScene ? 'active' : ''} key={scenario.id} type="button" onClick={() => setActiveScene(scenario.id)}>
+          {scenarios.map((scenario) => (
+            <button className={scenario.id === current?.id ? 'active' : ''} key={scenario.id} type="button" onClick={() => setActiveScene(scenario.id)}>
               {scenario.scene}
             </button>
           ))}
         </div>
         <div className="phrase-list">
-          {current.phrases.map((phrase) => (
-            <button className="phrase-card" key={phrase.id} type="button" onClick={() => playAudio(phrase.audioId)}>
+          {current?.phrases.map((phrase) => (
+            <div className="phrase-card" key={phrase.id}>
               <span>
                 <strong>{phrase.jp}</strong>
                 <small>{phrase.kana}</small>
                 <em>{phrase.cn}</em>
               </span>
-              <Volume2 size={18} />
-            </button>
+              <AudioButton audioId={phrase.audioId} label={phrase.jp} />
+            </div>
           ))}
         </div>
       </div>
@@ -308,76 +424,148 @@ function Phrases() {
   )
 }
 
-function Review({ masteredWords, favoriteWords, mistakes }: { masteredWords: string[]; favoriteWords: string[]; mistakes: string[] }) {
-  const reviewWords = studyWords
-    .filter((word) => favoriteWords.includes(word.id) || mistakes.includes(word.id) || !masteredWords.includes(word.id))
-    .slice(0, 12)
+function Flashcards({
+  level,
+  seen,
+  onLevelChange,
+  onSeen,
+  onAddReview,
+}: {
+  level: JLPTLevel
+  seen: string[]
+  onLevelChange: (level: JLPTLevel) => void
+  onSeen: (id: string) => void
+  onAddReview: (id: string) => void
+}) {
+  const cards = studyWords.filter((word) => word.level === level)
+  const [index, setIndex] = useState(0)
+  const [flipped, setFlipped] = useState(false)
+  const card = cards[index % cards.length]
+
+  function next() {
+    onSeen(card.id)
+    setFlipped(false)
+    setIndex((value) => (value + 1) % cards.length)
+  }
 
   return (
-    <Section id="review" title="今日复习队列" desc="优先显示收藏、错题和未掌握词，打开后就能开始复习。">
-      <div className="review-grid">
-        {reviewWords.map((word) => (
-          <button className="review-item" key={word.id} type="button" onClick={() => playAudio(word.audioId)}>
-            <span>{word.jp}</span>
-            <small>{word.cn}</small>
-          </button>
-        ))}
+    <Section id="flashcards" title={`${level} 闪卡练习`} desc="点击卡片翻面记忆词义；不会自动播放，只有点发音键才朗读。">
+      <LevelTabs value={level} onChange={onLevelChange} />
+      <div className="flashcard-shell">
+        <button className={`flashcard ${flipped ? 'flipped' : ''}`} type="button" onClick={() => setFlipped((value) => !value)}>
+          <span>{level} · {card.category}</span>
+          <strong>{card.jp}</strong>
+          {flipped ? (
+            <>
+              <small>{card.kana} · {card.romaji}</small>
+              <em>{card.cn}</em>
+              <p>{card.example}</p>
+              <p>{card.exampleCn}</p>
+            </>
+          ) : (
+            <em>点击翻面</em>
+          )}
+        </button>
+        <div className="flashcard-actions">
+          <AudioButton audioId={card.audioId} label={`闪卡 ${card.jp}`} />
+          <button className="secondary-button" type="button" onClick={() => onAddReview(card.id)}>加入复习</button>
+          <button className="primary-button" type="button" onClick={next}>下一张</button>
+        </div>
+        <p className="helper-text">已看过 {seen.length} 张；当前 {index + 1} / {cards.length}</p>
       </div>
     </Section>
   )
 }
 
+function Review({ favoriteWords, reviewQueue, mistakes }: { favoriteWords: string[]; reviewQueue: string[]; mistakes: string[] }) {
+  const reviewWords = getReviewWords(studyWords, { favoriteWords, reviewQueue, mistakes })
+
+  return (
+    <Section id="review" title="手动复习队列" desc="这里只显示你收藏、手动加入、或在自测里主动加入错题复习的内容。">
+      {reviewWords.length === 0 ? (
+        <div className="empty-state">
+          <ListChecks size={34} />
+          <h3>复习队列是空的</h3>
+          <p>在词汇、闪卡或自测错题里点击“加入复习”，这里才会出现内容。</p>
+        </div>
+      ) : (
+        <div className="review-grid">
+          {reviewWords.map((word) => (
+            <button className="review-item" key={word.id} type="button" aria-label={`复习 ${word.jp}`} onClick={() => playAudio(word.audioId)}>
+              <span>{word.jp}</span>
+              <small>{word.kana} · {word.cn}</small>
+            </button>
+          ))}
+        </div>
+      )}
+    </Section>
+  )
+}
+
 function Quiz({
+  level,
   bestScore,
+  onLevelChange,
   onFinish,
-  onMistake,
+  onAddMistake,
 }: {
+  level: JLPTLevel
   bestScore: number
+  onLevelChange: (level: JLPTLevel) => void
   onFinish: (score: number) => void
-  onMistake: (id: string) => void
+  onAddMistake: (id: string) => void
 }) {
   const [mode, setMode] = useState<QuizMode>('mixed')
   const [questions, setQuestions] = useState<QuizQuestion[]>([])
   const [index, setIndex] = useState(0)
   const [selected, setSelected] = useState<string | null>(null)
   const [score, setScore] = useState(0)
+  const [streak, setStreak] = useState(0)
+  const [finishedScore, setFinishedScore] = useState<number | null>(null)
   const current = questions[index]
+  const correct = selected === current?.answer
 
   function start(nextMode: QuizMode = mode) {
     setMode(nextMode)
-    setQuestions(makeQuiz(nextMode, { kanaRows, words: studyWords, grammarCards }))
+    setQuestions(makeQuiz(nextMode, { kanaRows, words: studyWords, grammarCards, phraseScenarios, level }))
     setIndex(0)
     setSelected(null)
     setScore(0)
+    setStreak(0)
+    setFinishedScore(null)
   }
 
   function choose(option: string) {
     if (!current || selected) return
     setSelected(option)
-    const correct = option === current.answer
-    const nextScore = correct ? score + 1 : score
-    if (!correct && current.id.startsWith('word-')) onMistake(current.id.replace('word-', ''))
-    if (correct) setScore(nextScore)
-    window.setTimeout(() => {
-      if (index + 1 >= questions.length) {
-        onFinish(nextScore)
-        setQuestions([])
-        setSelected(null)
-      } else {
-        setIndex((value) => value + 1)
-        setSelected(null)
-      }
-    }, 450)
+    const isCorrect = option === current.answer
+    setScore((value) => isCorrect ? value + 1 : value)
+    setStreak((value) => isCorrect ? value + 1 : 0)
+  }
+
+  function next() {
+    if (!current) return
+    const nextScore = score
+    if (index + 1 >= questions.length) {
+      setQuestions([])
+      setSelected(null)
+      setFinishedScore(nextScore)
+      onFinish(nextScore)
+    } else {
+      setIndex((value) => value + 1)
+      setSelected(null)
+    }
   }
 
   return (
-    <Section id="quiz" title="自测系统" desc="综合、假名、词汇、语法都能单独练，错题会进入复习队列。">
+    <Section id="quiz" title={`${level} 趣味自测`} desc="选择等级和题型，连击、即时反馈和完成总结会让练习更有节奏。">
+      <LevelTabs value={level} onChange={onLevelChange} />
       <div className="quiz-shell">
         <div className="quiz-panel">
           {!current ? (
             <div className="quiz-empty">
               <Trophy size={42} />
-              <h3>准备开始今天的自测</h3>
+              <h3>{finishedScore === null ? '准备开始今天的自测' : `本轮得分 ${finishedScore}`}</h3>
               <p>历史最高分：{bestScore}</p>
               <button className="primary-button" type="button" onClick={() => start('mixed')}>开始综合自测</button>
             </div>
@@ -385,8 +573,9 @@ function Quiz({
             <>
               <div className="quiz-meta">
                 <span>第 {index + 1} / {questions.length} 题 · {current.source}</span>
-                <span>当前得分：{score}</span>
+                <span>得分 {score} · 连击 {streak}</span>
               </div>
+              <div className="quiz-progress"><span style={{ width: `${((index + 1) / questions.length) * 100}%` }} /></div>
               <div className="quiz-question">
                 <h3>{current.q}</h3>
                 <AudioButton audioId={current.audioId} label="题目" />
@@ -408,13 +597,26 @@ function Quiz({
                   </button>
                 ))}
               </div>
+              {selected && (
+                <div className="quiz-feedback">
+                  <strong>{correct ? '答对了' : `正确答案：${current.answer}`}</strong>
+                  <div>
+                    {!correct && current.reviewWordId ? (
+                      <button className="secondary-button" type="button" onClick={() => onAddMistake(current.reviewWordId!)}>
+                        加入错题复习
+                      </button>
+                    ) : null}
+                    <button className="primary-button" type="button" onClick={next}>下一题</button>
+                  </div>
+                </div>
+              )}
             </>
           )}
         </div>
         <div className="quiz-modes">
-          {(['mixed', 'kana', 'word', 'grammar'] as QuizMode[]).map((item) => (
+          {(['mixed', 'kana', 'word', 'grammar', 'phrase'] as QuizMode[]).map((item) => (
             <button className={item === mode ? 'active' : ''} key={item} type="button" onClick={() => start(item)}>
-              {item === 'mixed' ? '综合' : item === 'kana' ? '假名' : item === 'word' ? '词汇' : '语法'}
+              {item === 'mixed' ? '综合挑战' : item === 'kana' ? '假名' : item === 'word' ? '词汇' : item === 'grammar' ? '语法' : '会话'}
             </button>
           ))}
         </div>
@@ -423,15 +625,9 @@ function Quiz({
   )
 }
 
-function Plan({
-  completedTasks,
-  onToggleTask,
-}: {
-  completedTasks: number[]
-  onToggleTask: (index: number) => void
-}) {
+function Plan({ completedTasks, onToggleTask }: { completedTasks: number[]; onToggleTask: (index: number) => void }) {
   return (
-    <Section id="plan" title="10 天入门计划" desc="每天一个小任务，强调开口、复习和自测，不追求一次塞太多。">
+    <Section id="plan" title="10 天入门计划" desc="每日任务继续保留，用于零基础启动；后续可配合 N4-N1 内容长期复习。">
       <div className="task-list">
         {dailyPlan.map((item, index) => (
           <button className={completedTasks.includes(index) ? 'task-row done' : 'task-row'} key={item.day} type="button" onClick={() => onToggleTask(index)}>
@@ -448,6 +644,8 @@ function Plan({
 
 export default function App() {
   const [progress, setProgress] = useState<StoredProgress>(() => readProgress())
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => readTheme())
+  const [activeSection, setActiveSection] = useState('dictionary')
   const appRef = useRef<HTMLDivElement>(null)
 
   const totalProgress = useMemo(() => {
@@ -461,6 +659,11 @@ export default function App() {
   }, [progress])
 
   useEffect(() => {
+    document.documentElement.dataset.theme = theme
+    localStorage.setItem(THEME_KEY, theme)
+  }, [theme])
+
+  useEffect(() => {
     if (!appRef.current) return
     const context = gsap.context(() => {
       if (import.meta.env.MODE === 'test') return
@@ -472,8 +675,29 @@ export default function App() {
     return () => context.revert()
   }, [])
 
+  useEffect(() => {
+    const sections = navItems.map((item) => document.getElementById(item.id)).filter((item): item is HTMLElement => Boolean(item))
+    if (!('IntersectionObserver' in window) || sections.length === 0) return
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+      if (visible?.target.id) setActiveSection(visible.target.id)
+    }, { rootMargin: '-32% 0px -55% 0px', threshold: [0.12, 0.25, 0.5] })
+    sections.forEach((section) => observer.observe(section))
+    return () => observer.disconnect()
+  }, [])
+
+  function setLevel(level: JLPTLevel) {
+    setProgress((value) => ({ ...value, activeLevel: level }))
+  }
+
+  function addReview(id: string) {
+    setProgress((value) => ({ ...value, reviewQueue: uniqueAppend(value.reviewQueue, id) }))
+  }
+
   const stats = [
-    { label: '词库', value: studyWords.length, icon: BookOpen },
+    { label: '词汇', value: studyWords.length, icon: BookOpen },
     { label: '固定音频', value: Object.keys(audioCatalog).length, icon: Volume2 },
     { label: '已掌握', value: progress.masteredWords.length, icon: Star },
   ]
@@ -485,11 +709,21 @@ export default function App() {
           <span><GraduationCap size={22} /></span>
           <strong>日语学习</strong>
         </a>
+        <button
+          className="theme-toggle"
+          type="button"
+          aria-label={theme === 'light' ? '切换到黑夜模式' : '切换到白天模式'}
+          onClick={() => setTheme((value) => value === 'light' ? 'dark' : 'light')}
+        >
+          {theme === 'light' ? <Moon size={17} /> : <Sun size={17} />}
+          {theme === 'light' ? '黑夜' : '白天'}
+        </button>
         <nav>
+          <span className="nav-indicator" style={{ transform: `translateY(${Math.max(0, navItems.findIndex((item) => item.id === activeSection)) * 47}px)` }} />
           {navItems.map((item) => {
             const Icon = item.icon
             return (
-              <a href={`#${item.id}`} key={item.id}>
+              <a className={activeSection === item.id ? 'active' : ''} href={`#${item.id}`} key={item.id} onClick={() => setActiveSection(item.id)}>
                 <Icon size={18} />
                 {item.label}
               </a>
@@ -501,19 +735,19 @@ export default function App() {
       <main id="top" className="main-content">
         <section className="hero-panel">
           <div>
-            <p className="eyeline">零基础到 N5 · 固定音频学习站</p>
+            <p className="eyeline">零基础到 N1 · 固定音频学习站</p>
             <h1>日语学习</h1>
             <p className="hero-copy">
-              像工具一样查词，像卡片一样复习，像考试一样自测。所有可朗读内容都绑定固定音频文件，不依赖系统随机发音。
+              从五十音、词汇、语法、会话到闪卡和自测，按 N5 到 N1 分级学习。所有朗读按钮都绑定固定音频，只有你点击时才播放。
             </p>
             <div className="hero-actions">
-              <a className="primary-button" href="#dictionary">打开词库</a>
-              <a className="secondary-button" href="#kana">练五十音</a>
+              <a className="primary-button" href="#vocabulary">开始词汇训练</a>
+              <a className="secondary-button" href="#flashcards">打开闪卡</a>
             </div>
           </div>
           <div className="hero-progress">
             <ProgressRing value={totalProgress} />
-            <p>今日总进度</p>
+            <p>当前总进度</p>
             <div className="stat-strip">
               {stats.map((stat) => {
                 const Icon = stat.icon
@@ -531,18 +765,45 @@ export default function App() {
 
         <Dictionary
           favoriteWords={progress.favoriteWords}
+          level={progress.activeLevel}
           masteredWords={progress.masteredWords}
+          reviewQueue={progress.reviewQueue}
+          onAddReview={addReview}
+          onLevelChange={setLevel}
+          onToggleFavorite={(id) => setProgress((value) => ({ ...value, favoriteWords: toggleListItem(value.favoriteWords, id) }))}
+          onToggleMaster={(id) => setProgress((value) => ({ ...value, masteredWords: toggleListItem(value.masteredWords, id) }))}
+        />
+        <VocabularyTrainer
+          favoriteWords={progress.favoriteWords}
+          level={progress.activeLevel}
+          masteredWords={progress.masteredWords}
+          reviewQueue={progress.reviewQueue}
+          onAddReview={addReview}
+          onLevelChange={setLevel}
           onToggleFavorite={(id) => setProgress((value) => ({ ...value, favoriteWords: toggleListItem(value.favoriteWords, id) }))}
           onToggleMaster={(id) => setProgress((value) => ({ ...value, masteredWords: toggleListItem(value.masteredWords, id) }))}
         />
         <KanaTable />
-        <Grammar />
-        <Phrases />
-        <Review favoriteWords={progress.favoriteWords} masteredWords={progress.masteredWords} mistakes={progress.mistakes} />
+        <Grammar level={progress.activeLevel} onLevelChange={setLevel} />
+        <Phrases level={progress.activeLevel} onLevelChange={setLevel} />
+        <Flashcards
+          level={progress.activeLevel}
+          seen={progress.flashcardSeen}
+          onAddReview={addReview}
+          onLevelChange={setLevel}
+          onSeen={(id) => setProgress((value) => ({ ...value, flashcardSeen: uniqueAppend(value.flashcardSeen, id) }))}
+        />
+        <Review favoriteWords={progress.favoriteWords} mistakes={progress.mistakes} reviewQueue={progress.reviewQueue} />
         <Quiz
           bestScore={progress.bestScore}
+          level={progress.activeLevel}
+          onAddMistake={(id) => setProgress((value) => ({
+            ...value,
+            mistakes: uniqueAppend(value.mistakes, id),
+            reviewQueue: uniqueAppend(value.reviewQueue, id),
+          }))}
           onFinish={(score) => setProgress((value) => ({ ...value, bestScore: Math.max(value.bestScore, score) }))}
-          onMistake={(id) => setProgress((value) => ({ ...value, mistakes: value.mistakes.includes(id) ? value.mistakes : [...value.mistakes, id] }))}
+          onLevelChange={setLevel}
         />
         <Plan
           completedTasks={progress.completedTasks}
@@ -559,7 +820,7 @@ export default function App() {
         {navItems.map((item) => {
           const Icon = item.icon
           return (
-            <a href={`#${item.id}`} key={item.id}>
+            <a className={activeSection === item.id ? 'active' : ''} href={`#${item.id}`} key={item.id} onClick={() => setActiveSection(item.id)}>
               <Icon size={17} />
               <span>{item.label}</span>
             </a>

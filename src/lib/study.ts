@@ -1,6 +1,7 @@
 import type {
   AudioEntry,
   GrammarCard,
+  JLPTLevel,
   KanaRow,
   PhraseScenario,
   StudyWord,
@@ -13,15 +14,16 @@ export type PlayableItem = {
   text: string
 }
 
-export type QuizMode = 'mixed' | 'kana' | 'word' | 'grammar'
+export type QuizMode = 'mixed' | 'kana' | 'word' | 'grammar' | 'phrase'
 
 export type QuizQuestion = {
   id: string
   q: string
   options: string[]
   answer: string
-  source: '假名' | '词汇' | '语法'
+  source: '假名' | '词汇' | '语法' | '会话'
   audioId?: string
+  reviewWordId?: string
 }
 
 export function getAudioPath(audioId: string) {
@@ -87,11 +89,31 @@ function rotate<T>(items: T[], by: number) {
   return [...items.slice(offset), ...items.slice(0, offset)]
 }
 
+export function getReviewWords(words: StudyWord[], progress: {
+  favoriteWords: string[]
+  reviewQueue: string[]
+  mistakes: string[]
+}) {
+  const explicitIds = [...progress.favoriteWords, ...progress.reviewQueue, ...progress.mistakes]
+    .filter((id, index, array) => array.indexOf(id) === index)
+  return explicitIds
+    .map((id) => words.find((word) => word.id === id))
+    .filter((word): word is StudyWord => Boolean(word))
+}
+
 export function makeQuiz(mode: QuizMode, content: {
   kanaRows: KanaRow[]
   words: StudyWord[]
   grammarCards: GrammarCard[]
+  phraseScenarios?: PhraseScenario[]
+  level?: JLPTLevel
 }): QuizQuestion[] {
+  const words = content.level ? content.words.filter((word) => word.level === content.level) : content.words
+  const grammarCards = content.level ? content.grammarCards.filter((card) => card.level === content.level) : content.grammarCards
+  const phraseScenarios = content.level
+    ? (content.phraseScenarios ?? []).filter((scenario) => scenario.level === content.level)
+    : (content.phraseScenarios ?? [])
+
   const kanaPool = content.kanaRows.flatMap((row) =>
     row.hira.map((hira, index) => ({
       hira,
@@ -109,31 +131,44 @@ export function makeQuiz(mode: QuizMode, content: {
     audioId: item.audioId,
   }))
 
-  const wordQuestions = content.words.slice(0, 24).map((word, index): QuizQuestion => ({
+  const wordQuestions = words.slice(0, 24).map((word, index): QuizQuestion => ({
     id: `word-${word.id}`,
     q: `「${word.jp}」是什么意思？`,
-    options: takeOptions(word.cn, content.words.slice(index + 1).map((next) => next.cn)),
+    options: takeOptions(word.cn, words.slice(index + 1).map((next) => next.cn)),
     answer: word.cn,
     source: '词汇',
     audioId: word.audioId,
+    reviewWordId: word.id,
   }))
 
-  const grammarQuestions = content.grammarCards.map((card, index): QuizQuestion => ({
+  const grammarQuestions = grammarCards.map((card, index): QuizQuestion => ({
     id: `grammar-${card.id}`,
     q: `「${card.title}」主要表达什么？`,
-    options: takeOptions(card.meaning, content.grammarCards.slice(index + 1).map((next) => next.meaning)),
+    options: takeOptions(card.meaning, grammarCards.slice(index + 1).map((next) => next.meaning)),
     answer: card.meaning,
     source: '语法',
     audioId: card.audioId,
   }))
 
+  const phrasePool = phraseScenarios.flatMap((scenario) => scenario.phrases)
+  const phraseQuestions = phrasePool.map((phrase, index): QuizQuestion => ({
+    id: `phrase-${phrase.id}`,
+    q: `听到或看到「${phrase.jp}」时，最接近的意思是？`,
+    options: takeOptions(phrase.cn, phrasePool.slice(index + 1).map((next) => next.cn)),
+    answer: phrase.cn,
+    source: '会话',
+    audioId: phrase.audioId,
+  }))
+
   if (mode === 'kana') return kanaQuestions.slice(0, 10)
   if (mode === 'word') return wordQuestions.slice(0, 10)
   if (mode === 'grammar') return grammarQuestions.slice(0, 8)
+  if (mode === 'phrase') return phraseQuestions.slice(0, 8)
 
   return [
-    ...kanaQuestions.slice(0, 4),
-    ...wordQuestions.slice(0, 4),
-    ...grammarQuestions.slice(0, 4),
+    ...kanaQuestions.slice(0, 3),
+    ...wordQuestions.slice(0, 3),
+    ...grammarQuestions.slice(0, 3),
+    ...phraseQuestions.slice(0, 3),
   ]
 }

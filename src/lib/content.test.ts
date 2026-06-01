@@ -4,10 +4,11 @@ import {
   dailyPlan,
   grammarCards,
   kanaRows,
+  learningLevels,
   phraseScenarios,
   studyWords,
 } from '../data/learningContent'
-import { getAudioPath, getPlayableStudyItems, makeQuiz } from './study'
+import { getAudioPath, getPlayableStudyItems, getReviewWords, makeQuiz } from './study'
 
 describe('learning content', () => {
   it('keeps every playable study item connected to one fixed audio file', () => {
@@ -34,11 +35,13 @@ describe('learning content', () => {
       kanaRows,
       words: studyWords,
       grammarCards,
+      phraseScenarios,
+      level: 'N3',
     })
 
     expect(quiz).toHaveLength(12)
     expect(new Set(quiz.map((item) => item.source))).toEqual(
-      new Set(['假名', '词汇', '语法']),
+      new Set(['假名', '词汇', '语法', '会话']),
     )
 
     for (const question of quiz) {
@@ -50,5 +53,29 @@ describe('learning content', () => {
   it('ships a focused beginner plan with ten daily tasks', () => {
     expect(dailyPlan).toHaveLength(10)
     expect(dailyPlan.every((item) => item.minutes >= 15)).toBe(true)
+  })
+
+  it('ships vocabulary, grammar, and phrases for every JLPT level', () => {
+    expect(learningLevels).toEqual(['N5', 'N4', 'N3', 'N2', 'N1'])
+
+    for (const level of learningLevels) {
+      expect(studyWords.filter((word) => word.level === level).length, `${level} words`).toBeGreaterThanOrEqual(8)
+      expect(grammarCards.filter((card) => card.level === level).length, `${level} grammar`).toBeGreaterThanOrEqual(4)
+      expect(phraseScenarios.some((scenario) => scenario.level === level), `${level} phrases`).toBe(true)
+    }
+  })
+
+  it('builds review only from explicit user actions', () => {
+    const reviewWords = getReviewWords(studyWords, {
+      favoriteWords: [studyWords[0].id],
+      reviewQueue: [studyWords[1].id],
+      mistakes: [studyWords[2].id],
+    })
+
+    expect(reviewWords.map((word) => word.id)).toEqual([
+      studyWords[0].id,
+      studyWords[1].id,
+      studyWords[2].id,
+    ])
   })
 })
