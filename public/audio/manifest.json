@@ -1,0 +1,1082 @@
+[
+  {
+    "id": "example-anata",
+    "text": "あなたは先生ですか。",
+    "kana": "",
+    "path": "audio/examples/anata.mp3"
+  },
+  {
+    "id": "example-arigatou",
+    "text": "ありがとうございます。",
+    "kana": "",
+    "path": "audio/examples/arigatou.mp3"
+  },
+  {
+    "id": "example-ashita",
+    "text": "また明日。",
+    "kana": "",
+    "path": "audio/examples/ashita.mp3"
+  },
+  {
+    "id": "example-atarashii",
+    "text": "新しいノートです。",
+    "kana": "",
+    "path": "audio/examples/atarashii.mp3"
+  },
+  {
+    "id": "example-basu",
+    "text": "バスで行きます。",
+    "kana": "",
+    "path": "audio/examples/basu.mp3"
+  },
+  {
+    "id": "example-benkyou",
+    "text": "毎日勉強します。",
+    "kana": "",
+    "path": "audio/examples/benkyou.mp3"
+  },
+  {
+    "id": "example-chiisai",
+    "text": "小さい本です。",
+    "kana": "",
+    "path": "audio/examples/chiisai.mp3"
+  },
+  {
+    "id": "example-chizu",
+    "text": "地図を見ます。",
+    "kana": "",
+    "path": "audio/examples/chizu.mp3"
+  },
+  {
+    "id": "example-densha",
+    "text": "電車に乗ります。",
+    "kana": "",
+    "path": "audio/examples/densha.mp3"
+  },
+  {
+    "id": "example-eki",
+    "text": "駅はどこですか。",
+    "kana": "",
+    "path": "audio/examples/eki.mp3"
+  },
+  {
+    "id": "example-gakusei",
+    "text": "学生です。",
+    "kana": "",
+    "path": "audio/examples/gakusei.mp3"
+  },
+  {
+    "id": "example-gohan",
+    "text": "ご飯を食べます。",
+    "kana": "",
+    "path": "audio/examples/gohan.mp3"
+  },
+  {
+    "id": "example-hai",
+    "text": "はい、そうです。",
+    "kana": "",
+    "path": "audio/examples/hai.mp3"
+  },
+  {
+    "id": "example-hatsuon",
+    "text": "発音を練習します。",
+    "kana": "",
+    "path": "audio/examples/hatsuon.mp3"
+  },
+  {
+    "id": "example-hidari",
+    "text": "左に曲がってください。",
+    "kana": "",
+    "path": "audio/examples/hidari.mp3"
+  },
+  {
+    "id": "example-hon",
+    "text": "本を読みます。",
+    "kana": "",
+    "path": "audio/examples/hon.mp3"
+  },
+  {
+    "id": "example-hoteru",
+    "text": "ホテルを予約します。",
+    "kana": "",
+    "path": "audio/examples/hoteru.mp3"
+  },
+  {
+    "id": "example-iie",
+    "text": "いいえ、違います。",
+    "kana": "",
+    "path": "audio/examples/iie.mp3"
+  },
+  {
+    "id": "example-ima",
+    "text": "今、何時ですか。",
+    "kana": "",
+    "path": "audio/examples/ima.mp3"
+  },
+  {
+    "id": "example-jisho",
+    "text": "辞書で調べます。",
+    "kana": "",
+    "path": "audio/examples/jisho.mp3"
+  },
+  {
+    "id": "example-kantan",
+    "text": "これは簡単です。",
+    "kana": "",
+    "path": "audio/examples/kantan.mp3"
+  },
+  {
+    "id": "example-kazoku",
+    "text": "家族は中国にいます。",
+    "kana": "",
+    "path": "audio/examples/kazoku.mp3"
+  },
+  {
+    "id": "example-kinou",
+    "text": "昨日勉強しました。",
+    "kana": "",
+    "path": "audio/examples/kinou.mp3"
+  },
+  {
+    "id": "example-konbanwa",
+    "text": "こんばんは、元気ですか。",
+    "kana": "",
+    "path": "audio/examples/konbanwa.mp3"
+  },
+  {
+    "id": "example-konbini",
+    "text": "コンビニで買います。",
+    "kana": "",
+    "path": "audio/examples/konbini.mp3"
+  },
+  {
+    "id": "example-konnichiwa",
+    "text": "こんにちは、田中さん。",
+    "kana": "",
+    "path": "audio/examples/konnichiwa.mp3"
+  },
+  {
+    "id": "example-koohii",
+    "text": "コーヒーをください。",
+    "kana": "",
+    "path": "audio/examples/koohii.mp3"
+  },
+  {
+    "id": "example-kuukou",
+    "text": "空港へ行きます。",
+    "kana": "",
+    "path": "audio/examples/kuukou.mp3"
+  },
+  {
+    "id": "example-kyou",
+    "text": "今日は休みです。",
+    "kana": "",
+    "path": "audio/examples/kyou.mp3"
+  },
+  {
+    "id": "example-mae",
+    "text": "駅の前です。",
+    "kana": "",
+    "path": "audio/examples/mae.mp3"
+  },
+  {
+    "id": "example-menyuu",
+    "text": "メニューをお願いします。",
+    "kana": "",
+    "path": "audio/examples/menyuu.mp3"
+  },
+  {
+    "id": "example-migi",
+    "text": "右に曲がってください。",
+    "kana": "",
+    "path": "audio/examples/migi.mp3"
+  },
+  {
+    "id": "example-mizu",
+    "text": "水をください。",
+    "kana": "",
+    "path": "audio/examples/mizu.mp3"
+  },
+  {
+    "id": "example-muzukashii",
+    "text": "日本語は難しいです。",
+    "kana": "",
+    "path": "audio/examples/muzukashii.mp3"
+  },
+  {
+    "id": "example-nihongo",
+    "text": "日本語を勉強します。",
+    "kana": "",
+    "path": "audio/examples/nihongo.mp3"
+  },
+  {
+    "id": "example-ocha",
+    "text": "お茶を飲みます。",
+    "kana": "",
+    "path": "audio/examples/ocha.mp3"
+  },
+  {
+    "id": "example-ohayou",
+    "text": "おはようございます。",
+    "kana": "",
+    "path": "audio/examples/ohayou.mp3"
+  },
+  {
+    "id": "example-oishii",
+    "text": "これはおいしいです。",
+    "kana": "",
+    "path": "audio/examples/oishii.mp3"
+  },
+  {
+    "id": "example-onegaishimasu",
+    "text": "水をお願いします。",
+    "kana": "",
+    "path": "audio/examples/onegaishimasu.mp3"
+  },
+  {
+    "id": "example-ookii",
+    "text": "大きい店です。",
+    "kana": "",
+    "path": "audio/examples/ookii.mp3"
+  },
+  {
+    "id": "example-pan",
+    "text": "パンを食べます。",
+    "kana": "",
+    "path": "audio/examples/pan.mp3"
+  },
+  {
+    "id": "example-raamen",
+    "text": "ラーメンが好きです。",
+    "kana": "",
+    "path": "audio/examples/raamen.mp3"
+  },
+  {
+    "id": "example-renshuu",
+    "text": "会話を練習します。",
+    "kana": "",
+    "path": "audio/examples/renshuu.mp3"
+  },
+  {
+    "id": "example-sensei",
+    "text": "先生に聞きます。",
+    "kana": "",
+    "path": "audio/examples/sensei.mp3"
+  },
+  {
+    "id": "example-sumimasen",
+    "text": "すみません、駅はどこですか。",
+    "kana": "",
+    "path": "audio/examples/sumimasen.mp3"
+  },
+  {
+    "id": "example-sushi",
+    "text": "寿司を食べたいです。",
+    "kana": "",
+    "path": "audio/examples/sushi.mp3"
+  },
+  {
+    "id": "example-takai",
+    "text": "あれは高いです。",
+    "kana": "",
+    "path": "audio/examples/takai.mp3"
+  },
+  {
+    "id": "example-takushii",
+    "text": "タクシーを呼びます。",
+    "kana": "",
+    "path": "audio/examples/takushii.mp3"
+  },
+  {
+    "id": "example-toire",
+    "text": "トイレはどこですか。",
+    "kana": "",
+    "path": "audio/examples/toire.mp3"
+  },
+  {
+    "id": "example-tomodachi",
+    "text": "友達に会います。",
+    "kana": "",
+    "path": "audio/examples/tomodachi.mp3"
+  },
+  {
+    "id": "example-ushiro",
+    "text": "店の後ろです。",
+    "kana": "",
+    "path": "audio/examples/ushiro.mp3"
+  },
+  {
+    "id": "example-watashi",
+    "text": "私は学生です。",
+    "kana": "",
+    "path": "audio/examples/watashi.mp3"
+  },
+  {
+    "id": "example-yasui",
+    "text": "これは安いです。",
+    "kana": "",
+    "path": "audio/examples/yasui.mp3"
+  },
+  {
+    "id": "grammar-a-wa-b-desu",
+    "text": "私は学生です。",
+    "kana": "",
+    "path": "audio/grammar/a-wa-b-desu.mp3"
+  },
+  {
+    "id": "grammar-de",
+    "text": "駅で友達に会います。",
+    "kana": "",
+    "path": "audio/grammar/de.mp3"
+  },
+  {
+    "id": "grammar-desu-ka",
+    "text": "これは水ですか。",
+    "kana": "",
+    "path": "audio/grammar/desu-ka.mp3"
+  },
+  {
+    "id": "grammar-ga-suki",
+    "text": "日本語が好きです。",
+    "kana": "",
+    "path": "audio/grammar/ga-suki.mp3"
+  },
+  {
+    "id": "grammar-janai",
+    "text": "私は先生じゃありません。",
+    "kana": "",
+    "path": "audio/grammar/janai.mp3"
+  },
+  {
+    "id": "grammar-kore-sore-are",
+    "text": "これは何ですか。",
+    "kana": "",
+    "path": "audio/grammar/kore-sore-are.mp3"
+  },
+  {
+    "id": "grammar-masu",
+    "text": "毎日日本語を勉強します。",
+    "kana": "",
+    "path": "audio/grammar/masu.mp3"
+  },
+  {
+    "id": "grammar-wo",
+    "text": "パンを食べます。",
+    "kana": "",
+    "path": "audio/grammar/wo.mp3"
+  },
+  {
+    "id": "kana-a",
+    "text": "あ",
+    "kana": "",
+    "path": "audio/kana/a.mp3"
+  },
+  {
+    "id": "kana-chi",
+    "text": "ち",
+    "kana": "",
+    "path": "audio/kana/chi.mp3"
+  },
+  {
+    "id": "kana-e",
+    "text": "え",
+    "kana": "",
+    "path": "audio/kana/e.mp3"
+  },
+  {
+    "id": "kana-fu",
+    "text": "ふ",
+    "kana": "",
+    "path": "audio/kana/fu.mp3"
+  },
+  {
+    "id": "kana-ha",
+    "text": "は",
+    "kana": "",
+    "path": "audio/kana/ha.mp3"
+  },
+  {
+    "id": "kana-he",
+    "text": "へ",
+    "kana": "",
+    "path": "audio/kana/he.mp3"
+  },
+  {
+    "id": "kana-hi",
+    "text": "ひ",
+    "kana": "",
+    "path": "audio/kana/hi.mp3"
+  },
+  {
+    "id": "kana-ho",
+    "text": "ほ",
+    "kana": "",
+    "path": "audio/kana/ho.mp3"
+  },
+  {
+    "id": "kana-i",
+    "text": "い",
+    "kana": "",
+    "path": "audio/kana/i.mp3"
+  },
+  {
+    "id": "kana-ka",
+    "text": "か",
+    "kana": "",
+    "path": "audio/kana/ka.mp3"
+  },
+  {
+    "id": "kana-ke",
+    "text": "け",
+    "kana": "",
+    "path": "audio/kana/ke.mp3"
+  },
+  {
+    "id": "kana-ki",
+    "text": "き",
+    "kana": "",
+    "path": "audio/kana/ki.mp3"
+  },
+  {
+    "id": "kana-ko",
+    "text": "こ",
+    "kana": "",
+    "path": "audio/kana/ko.mp3"
+  },
+  {
+    "id": "kana-ku",
+    "text": "く",
+    "kana": "",
+    "path": "audio/kana/ku.mp3"
+  },
+  {
+    "id": "kana-ma",
+    "text": "ま",
+    "kana": "",
+    "path": "audio/kana/ma.mp3"
+  },
+  {
+    "id": "kana-me",
+    "text": "め",
+    "kana": "",
+    "path": "audio/kana/me.mp3"
+  },
+  {
+    "id": "kana-mi",
+    "text": "み",
+    "kana": "",
+    "path": "audio/kana/mi.mp3"
+  },
+  {
+    "id": "kana-mo",
+    "text": "も",
+    "kana": "",
+    "path": "audio/kana/mo.mp3"
+  },
+  {
+    "id": "kana-mu",
+    "text": "む",
+    "kana": "",
+    "path": "audio/kana/mu.mp3"
+  },
+  {
+    "id": "kana-n",
+    "text": "ん",
+    "kana": "",
+    "path": "audio/kana/n.mp3"
+  },
+  {
+    "id": "kana-na",
+    "text": "な",
+    "kana": "",
+    "path": "audio/kana/na.mp3"
+  },
+  {
+    "id": "kana-ne",
+    "text": "ね",
+    "kana": "",
+    "path": "audio/kana/ne.mp3"
+  },
+  {
+    "id": "kana-ni",
+    "text": "に",
+    "kana": "",
+    "path": "audio/kana/ni.mp3"
+  },
+  {
+    "id": "kana-no",
+    "text": "の",
+    "kana": "",
+    "path": "audio/kana/no.mp3"
+  },
+  {
+    "id": "kana-nu",
+    "text": "ぬ",
+    "kana": "",
+    "path": "audio/kana/nu.mp3"
+  },
+  {
+    "id": "kana-o",
+    "text": "お",
+    "kana": "",
+    "path": "audio/kana/o.mp3"
+  },
+  {
+    "id": "kana-ra",
+    "text": "ら",
+    "kana": "",
+    "path": "audio/kana/ra.mp3"
+  },
+  {
+    "id": "kana-re",
+    "text": "れ",
+    "kana": "",
+    "path": "audio/kana/re.mp3"
+  },
+  {
+    "id": "kana-ri",
+    "text": "り",
+    "kana": "",
+    "path": "audio/kana/ri.mp3"
+  },
+  {
+    "id": "kana-ro",
+    "text": "ろ",
+    "kana": "",
+    "path": "audio/kana/ro.mp3"
+  },
+  {
+    "id": "kana-ru",
+    "text": "る",
+    "kana": "",
+    "path": "audio/kana/ru.mp3"
+  },
+  {
+    "id": "kana-sa",
+    "text": "さ",
+    "kana": "",
+    "path": "audio/kana/sa.mp3"
+  },
+  {
+    "id": "kana-se",
+    "text": "せ",
+    "kana": "",
+    "path": "audio/kana/se.mp3"
+  },
+  {
+    "id": "kana-shi",
+    "text": "し",
+    "kana": "",
+    "path": "audio/kana/shi.mp3"
+  },
+  {
+    "id": "kana-so",
+    "text": "そ",
+    "kana": "",
+    "path": "audio/kana/so.mp3"
+  },
+  {
+    "id": "kana-su",
+    "text": "す",
+    "kana": "",
+    "path": "audio/kana/su.mp3"
+  },
+  {
+    "id": "kana-ta",
+    "text": "た",
+    "kana": "",
+    "path": "audio/kana/ta.mp3"
+  },
+  {
+    "id": "kana-te",
+    "text": "て",
+    "kana": "",
+    "path": "audio/kana/te.mp3"
+  },
+  {
+    "id": "kana-to",
+    "text": "と",
+    "kana": "",
+    "path": "audio/kana/to.mp3"
+  },
+  {
+    "id": "kana-tsu",
+    "text": "つ",
+    "kana": "",
+    "path": "audio/kana/tsu.mp3"
+  },
+  {
+    "id": "kana-u",
+    "text": "う",
+    "kana": "",
+    "path": "audio/kana/u.mp3"
+  },
+  {
+    "id": "kana-wa",
+    "text": "わ",
+    "kana": "",
+    "path": "audio/kana/wa.mp3"
+  },
+  {
+    "id": "kana-wo",
+    "text": "を",
+    "kana": "",
+    "path": "audio/kana/wo.mp3"
+  },
+  {
+    "id": "kana-ya",
+    "text": "や",
+    "kana": "",
+    "path": "audio/kana/ya.mp3"
+  },
+  {
+    "id": "kana-yo",
+    "text": "よ",
+    "kana": "",
+    "path": "audio/kana/yo.mp3"
+  },
+  {
+    "id": "kana-yu",
+    "text": "ゆ",
+    "kana": "",
+    "path": "audio/kana/yu.mp3"
+  },
+  {
+    "id": "phrase-convenience-bag",
+    "text": "袋はいりますか。",
+    "kana": "ふくろはいりますか",
+    "path": "audio/phrases/convenience-bag.mp3"
+  },
+  {
+    "id": "phrase-convenience-checkout",
+    "text": "お会計お願いします。",
+    "kana": "おかいけいおねがいします",
+    "path": "audio/phrases/convenience-checkout.mp3"
+  },
+  {
+    "id": "phrase-convenience-kore",
+    "text": "これをください。",
+    "kana": "これをください",
+    "path": "audio/phrases/convenience-kore.mp3"
+  },
+  {
+    "id": "phrase-convenience-no",
+    "text": "いりません。",
+    "kana": "いりません",
+    "path": "audio/phrases/convenience-no.mp3"
+  },
+  {
+    "id": "phrase-convenience-warm",
+    "text": "温めますか。",
+    "kana": "あたためますか",
+    "path": "audio/phrases/convenience-warm.mp3"
+  },
+  {
+    "id": "phrase-directions-near",
+    "text": "ここから近いですか。",
+    "kana": "ここからちかいですか",
+    "path": "audio/phrases/directions-near.mp3"
+  },
+  {
+    "id": "phrase-directions-repeat",
+    "text": "もう一度お願いします。",
+    "kana": "もういちどおねがいします",
+    "path": "audio/phrases/directions-repeat.mp3"
+  },
+  {
+    "id": "phrase-directions-right",
+    "text": "右に曲がってください。",
+    "kana": "みぎにまがってください",
+    "path": "audio/phrases/directions-right.mp3"
+  },
+  {
+    "id": "phrase-directions-station",
+    "text": "駅はどこですか。",
+    "kana": "えきはどこですか",
+    "path": "audio/phrases/directions-station.mp3"
+  },
+  {
+    "id": "phrase-directions-straight",
+    "text": "まっすぐ行ってください。",
+    "kana": "まっすぐいってください",
+    "path": "audio/phrases/directions-straight.mp3"
+  },
+  {
+    "id": "phrase-intro-china",
+    "text": "中国から来ました。",
+    "kana": "ちゅうごくからきました",
+    "path": "audio/phrases/intro-china.mp3"
+  },
+  {
+    "id": "phrase-intro-first",
+    "text": "はじめまして。",
+    "kana": "はじめまして",
+    "path": "audio/phrases/intro-first.mp3"
+  },
+  {
+    "id": "phrase-intro-name",
+    "text": "私は張です。",
+    "kana": "わたしはちょうです",
+    "path": "audio/phrases/intro-name.mp3"
+  },
+  {
+    "id": "phrase-intro-study",
+    "text": "日本語を勉強しています。",
+    "kana": "にほんごをべんきょうしています",
+    "path": "audio/phrases/intro-study.mp3"
+  },
+  {
+    "id": "phrase-intro-yoroshiku",
+    "text": "よろしくお願いします。",
+    "kana": "よろしくおねがいします",
+    "path": "audio/phrases/intro-yoroshiku.mp3"
+  },
+  {
+    "id": "phrase-restaurant-checkout",
+    "text": "お会計お願いします。",
+    "kana": "おかいけいおねがいします",
+    "path": "audio/phrases/restaurant-checkout.mp3"
+  },
+  {
+    "id": "phrase-restaurant-menu",
+    "text": "メニューをお願いします。",
+    "kana": "メニューをおねがいします",
+    "path": "audio/phrases/restaurant-menu.mp3"
+  },
+  {
+    "id": "phrase-restaurant-recommend",
+    "text": "おすすめは何ですか。",
+    "kana": "おすすめはなんですか",
+    "path": "audio/phrases/restaurant-recommend.mp3"
+  },
+  {
+    "id": "phrase-restaurant-spicy",
+    "text": "これは辛いですか。",
+    "kana": "これはからいですか",
+    "path": "audio/phrases/restaurant-spicy.mp3"
+  },
+  {
+    "id": "phrase-restaurant-water",
+    "text": "水をください。",
+    "kana": "みずをください",
+    "path": "audio/phrases/restaurant-water.mp3"
+  },
+  {
+    "id": "word-anata",
+    "text": "あなた",
+    "kana": "あなた",
+    "path": "audio/words/anata.mp3"
+  },
+  {
+    "id": "word-arigatou",
+    "text": "ありがとう",
+    "kana": "ありがとう",
+    "path": "audio/words/arigatou.mp3"
+  },
+  {
+    "id": "word-ashita",
+    "text": "明日",
+    "kana": "あした",
+    "path": "audio/words/ashita.mp3"
+  },
+  {
+    "id": "word-atarashii",
+    "text": "新しい",
+    "kana": "あたらしい",
+    "path": "audio/words/atarashii.mp3"
+  },
+  {
+    "id": "word-basu",
+    "text": "バス",
+    "kana": "バス",
+    "path": "audio/words/basu.mp3"
+  },
+  {
+    "id": "word-benkyou",
+    "text": "勉強",
+    "kana": "べんきょう",
+    "path": "audio/words/benkyou.mp3"
+  },
+  {
+    "id": "word-chiisai",
+    "text": "小さい",
+    "kana": "ちいさい",
+    "path": "audio/words/chiisai.mp3"
+  },
+  {
+    "id": "word-chizu",
+    "text": "地図",
+    "kana": "ちず",
+    "path": "audio/words/chizu.mp3"
+  },
+  {
+    "id": "word-densha",
+    "text": "電車",
+    "kana": "でんしゃ",
+    "path": "audio/words/densha.mp3"
+  },
+  {
+    "id": "word-eki",
+    "text": "駅",
+    "kana": "えき",
+    "path": "audio/words/eki.mp3"
+  },
+  {
+    "id": "word-gakusei",
+    "text": "学生",
+    "kana": "がくせい",
+    "path": "audio/words/gakusei.mp3"
+  },
+  {
+    "id": "word-gohan",
+    "text": "ご飯",
+    "kana": "ごはん",
+    "path": "audio/words/gohan.mp3"
+  },
+  {
+    "id": "word-hai",
+    "text": "はい",
+    "kana": "はい",
+    "path": "audio/words/hai.mp3"
+  },
+  {
+    "id": "word-hatsuon",
+    "text": "発音",
+    "kana": "はつおん",
+    "path": "audio/words/hatsuon.mp3"
+  },
+  {
+    "id": "word-hidari",
+    "text": "左",
+    "kana": "ひだり",
+    "path": "audio/words/hidari.mp3"
+  },
+  {
+    "id": "word-hon",
+    "text": "本",
+    "kana": "ほん",
+    "path": "audio/words/hon.mp3"
+  },
+  {
+    "id": "word-hoteru",
+    "text": "ホテル",
+    "kana": "ホテル",
+    "path": "audio/words/hoteru.mp3"
+  },
+  {
+    "id": "word-iie",
+    "text": "いいえ",
+    "kana": "いいえ",
+    "path": "audio/words/iie.mp3"
+  },
+  {
+    "id": "word-ima",
+    "text": "今",
+    "kana": "いま",
+    "path": "audio/words/ima.mp3"
+  },
+  {
+    "id": "word-jisho",
+    "text": "辞書",
+    "kana": "じしょ",
+    "path": "audio/words/jisho.mp3"
+  },
+  {
+    "id": "word-kantan",
+    "text": "簡単",
+    "kana": "かんたん",
+    "path": "audio/words/kantan.mp3"
+  },
+  {
+    "id": "word-kazoku",
+    "text": "家族",
+    "kana": "かぞく",
+    "path": "audio/words/kazoku.mp3"
+  },
+  {
+    "id": "word-kinou",
+    "text": "昨日",
+    "kana": "きのう",
+    "path": "audio/words/kinou.mp3"
+  },
+  {
+    "id": "word-konbanwa",
+    "text": "こんばんは",
+    "kana": "こんばんは",
+    "path": "audio/words/konbanwa.mp3"
+  },
+  {
+    "id": "word-konbini",
+    "text": "コンビニ",
+    "kana": "コンビニ",
+    "path": "audio/words/konbini.mp3"
+  },
+  {
+    "id": "word-konnichiwa",
+    "text": "こんにちは",
+    "kana": "こんにちは",
+    "path": "audio/words/konnichiwa.mp3"
+  },
+  {
+    "id": "word-koohii",
+    "text": "コーヒー",
+    "kana": "コーヒー",
+    "path": "audio/words/koohii.mp3"
+  },
+  {
+    "id": "word-kuukou",
+    "text": "空港",
+    "kana": "くうこう",
+    "path": "audio/words/kuukou.mp3"
+  },
+  {
+    "id": "word-kyou",
+    "text": "今日",
+    "kana": "きょう",
+    "path": "audio/words/kyou.mp3"
+  },
+  {
+    "id": "word-mae",
+    "text": "前",
+    "kana": "まえ",
+    "path": "audio/words/mae.mp3"
+  },
+  {
+    "id": "word-menyuu",
+    "text": "メニュー",
+    "kana": "メニュー",
+    "path": "audio/words/menyuu.mp3"
+  },
+  {
+    "id": "word-migi",
+    "text": "右",
+    "kana": "みぎ",
+    "path": "audio/words/migi.mp3"
+  },
+  {
+    "id": "word-mizu",
+    "text": "水",
+    "kana": "みず",
+    "path": "audio/words/mizu.mp3"
+  },
+  {
+    "id": "word-muzukashii",
+    "text": "難しい",
+    "kana": "むずかしい",
+    "path": "audio/words/muzukashii.mp3"
+  },
+  {
+    "id": "word-nihongo",
+    "text": "日本語",
+    "kana": "にほんご",
+    "path": "audio/words/nihongo.mp3"
+  },
+  {
+    "id": "word-ocha",
+    "text": "お茶",
+    "kana": "おちゃ",
+    "path": "audio/words/ocha.mp3"
+  },
+  {
+    "id": "word-ohayou",
+    "text": "おはよう",
+    "kana": "おはよう",
+    "path": "audio/words/ohayou.mp3"
+  },
+  {
+    "id": "word-oishii",
+    "text": "おいしい",
+    "kana": "おいしい",
+    "path": "audio/words/oishii.mp3"
+  },
+  {
+    "id": "word-onegaishimasu",
+    "text": "お願いします",
+    "kana": "おねがいします",
+    "path": "audio/words/onegaishimasu.mp3"
+  },
+  {
+    "id": "word-ookii",
+    "text": "大きい",
+    "kana": "おおきい",
+    "path": "audio/words/ookii.mp3"
+  },
+  {
+    "id": "word-pan",
+    "text": "パン",
+    "kana": "パン",
+    "path": "audio/words/pan.mp3"
+  },
+  {
+    "id": "word-raamen",
+    "text": "ラーメン",
+    "kana": "ラーメン",
+    "path": "audio/words/raamen.mp3"
+  },
+  {
+    "id": "word-renshuu",
+    "text": "練習",
+    "kana": "れんしゅう",
+    "path": "audio/words/renshuu.mp3"
+  },
+  {
+    "id": "word-sensei",
+    "text": "先生",
+    "kana": "せんせい",
+    "path": "audio/words/sensei.mp3"
+  },
+  {
+    "id": "word-sumimasen",
+    "text": "すみません",
+    "kana": "すみません",
+    "path": "audio/words/sumimasen.mp3"
+  },
+  {
+    "id": "word-sushi",
+    "text": "寿司",
+    "kana": "すし",
+    "path": "audio/words/sushi.mp3"
+  },
+  {
+    "id": "word-takai",
+    "text": "高い",
+    "kana": "たかい",
+    "path": "audio/words/takai.mp3"
+  },
+  {
+    "id": "word-takushii",
+    "text": "タクシー",
+    "kana": "タクシー",
+    "path": "audio/words/takushii.mp3"
+  },
+  {
+    "id": "word-toire",
+    "text": "トイレ",
+    "kana": "トイレ",
+    "path": "audio/words/toire.mp3"
+  },
+  {
+    "id": "word-tomodachi",
+    "text": "友達",
+    "kana": "ともだち",
+    "path": "audio/words/tomodachi.mp3"
+  },
+  {
+    "id": "word-ushiro",
+    "text": "後ろ",
+    "kana": "うしろ",
+    "path": "audio/words/ushiro.mp3"
+  },
+  {
+    "id": "word-watashi",
+    "text": "私",
+    "kana": "わたし",
+    "path": "audio/words/watashi.mp3"
+  },
+  {
+    "id": "word-yasui",
+    "text": "安い",
+    "kana": "やすい",
+    "path": "audio/words/yasui.mp3"
+  }
+]
