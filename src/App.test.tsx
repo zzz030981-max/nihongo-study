@@ -56,6 +56,22 @@ describe('App', () => {
     expect(screen.queryByRole('button', { name: /复习 駅/ })).not.toBeInTheDocument()
   })
 
+  it('renders routes for abroad communication and certification study', () => {
+    render(<App />)
+
+    expect(screen.getByRole('heading', { name: '能力路线' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: '出国沟通闯关' })).toBeInTheDocument()
+    expect(screen.getByText('JLPT 考证路线')).toBeInTheDocument()
+  })
+
+  it('can switch the certification route to N1', () => {
+    render(<App />)
+
+    fireEvent.click(screen.getByRole('button', { name: 'N1 考证路线' }))
+
+    expect(screen.getByText('理解复杂文章、新闻、评论和接近自然速度的长对话。')).toBeInTheDocument()
+  })
+
   it('keeps flashcards silent until the audio button is clicked', () => {
     const play = vi.fn()
     vi.stubGlobal('Audio', vi.fn(function AudioMock() {

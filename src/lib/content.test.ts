@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest'
 import {
+  abroadTracks,
   audioCatalog,
   dailyPlan,
+  examRoadmap,
   grammarCards,
   kanaRows,
   learningLevels,
@@ -78,5 +80,26 @@ describe('learning content', () => {
       studyWords[1].id,
       studyWords[2].id,
     ])
+  })
+
+  it('defines abroad communication and JLPT certification routes', () => {
+    expect(abroadTracks.map((track) => track.id)).toEqual([
+      'entry',
+      'transport',
+      'hotel',
+      'food-shopping',
+      'medical',
+      'housing',
+      'emergency',
+      'work-study',
+    ])
+    expect(abroadTracks.every((track) => track.missions.length >= 3)).toBe(true)
+
+    for (const level of learningLevels) {
+      const route = examRoadmap.find((item) => item.level === level)
+      expect(route, level).toBeDefined()
+      expect(route?.sections.map((section) => section.name)).toEqual(['词汇', '语法', '阅读', '听力'])
+      expect(route?.passTarget.length, `${level} pass target`).toBeGreaterThan(10)
+    }
   })
 })

@@ -419,16 +419,194 @@ h1 {
   gap: 10px;
 }
 
+.route-grid,
+.exam-section-grid,
+.mission-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.route-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .word-row,
 .grammar-card,
 .phrase-card,
 .review-item,
 .task-row,
 .vocab-group,
-.empty-state {
+.empty-state,
+.route-card,
+.mission-card,
+.roadmap-panel {
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--shell);
+}
+
+.route-card {
+  display: grid;
+  align-content: start;
+  gap: 11px;
+  padding: 18px;
+}
+
+.route-card span,
+.mission-top span,
+.roadmap-head > span {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.route-card h3,
+.roadmap-head h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 20px;
+}
+
+.route-card p,
+.route-card li,
+.mission-card p,
+.mission-card li,
+.roadmap-panel p,
+.exam-section-grid small {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.route-card p,
+.mission-card p,
+.roadmap-panel p {
+  margin: 0;
+}
+
+.route-card ul,
+.mission-list {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.exam-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.exam-tabs button {
+  min-height: 36px;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 11px;
+  color: var(--muted);
+  background: var(--soft);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.exam-tabs button.active {
+  color: white;
+  background: #2742c4;
+}
+
+.roadmap-panel {
+  margin-top: 12px;
+  padding: 18px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--accent) 9%, transparent), transparent 45%),
+    var(--shell);
+}
+
+.roadmap-head {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.roadmap-head > span {
+  display: grid;
+  min-width: 54px;
+  min-height: 54px;
+  place-items: center;
+  border-radius: 8px;
+  color: white;
+  background: #2742c4;
+  font-size: 18px;
+}
+
+.daily-target {
+  margin-top: 13px !important;
+  border-radius: 8px;
+  padding: 11px 13px;
+  background: var(--soft);
+  font-weight: 800;
+}
+
+.exam-section-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 12px;
+}
+
+.exam-section-grid article {
+  display: grid;
+  gap: 6px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 13px;
+  background: color-mix(in srgb, var(--shell) 88%, var(--soft));
+}
+
+.exam-section-grid strong {
+  color: var(--text);
+}
+
+.exam-section-grid p,
+.exam-section-grid small {
+  margin: 0;
+  font-size: 13px;
+}
+
+.mission-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.mission-card {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 17px;
+}
+
+.mission-top {
+  display: grid;
+  gap: 5px;
+}
+
+.mission-top small {
+  color: var(--faint);
+  line-height: 1.5;
+}
+
+.pass-check {
+  display: grid;
+  gap: 5px;
+  border-radius: 8px;
+  padding: 11px 12px;
+  background: var(--accent-soft);
+}
+
+.pass-check strong {
+  color: var(--accent);
+  font-size: 12px;
+}
+
+.pass-check span {
+  color: var(--text);
+  line-height: 1.55;
 }
 
 .word-row {
@@ -887,6 +1065,8 @@ h1 {
 
   .hero-panel,
   .section-heading,
+  .route-grid,
+  .exam-section-grid,
   .phrase-layout,
   .quiz-shell {
     grid-template-columns: 1fr;

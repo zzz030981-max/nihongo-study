@@ -10,7 +10,9 @@ import {
   Languages,
   Layers,
   ListChecks,
+  Map,
   Moon,
+  Plane,
   Plus,
   Search,
   Sparkles,
@@ -20,8 +22,10 @@ import {
   Volume2,
 } from 'lucide-react'
 import {
+  abroadTracks,
   audioCatalog,
   dailyPlan,
+  examRoadmap,
   grammarCards,
   kanaRows,
   learningLevels,
@@ -56,10 +60,12 @@ const LEGACY_STORAGE_KEY = 'nihongo-study-progress-v1'
 const THEME_KEY = 'nihongo-study-theme'
 
 const navItems = [
+  { id: 'route', label: '路线', icon: Map },
   { id: 'dictionary', label: '词库', icon: Search },
   { id: 'vocabulary', label: '词汇', icon: Layers },
   { id: 'kana', label: '五十音', icon: Languages },
   { id: 'grammar', label: '语法', icon: BookOpen },
+  { id: 'abroad', label: '出国', icon: Plane },
   { id: 'phrases', label: '会话', icon: Headphones },
   { id: 'flashcards', label: '闪卡', icon: Sparkles },
   { id: 'review', label: '复习', icon: ListChecks },
@@ -165,6 +171,96 @@ function LevelTabs({ value, onChange }: { value: JLPTLevel; onChange: (level: JL
         </button>
       ))}
     </div>
+  )
+}
+
+function AbilityRoute({ level, onLevelChange }: { level: JLPTLevel; onLevelChange: (level: JLPTLevel) => void }) {
+  const route = examRoadmap.find((item) => item.level === level) ?? examRoadmap[0]
+
+  return (
+    <Section id="route" title="能力路线" desc="把零基础、出国沟通和 JLPT 考证拆成可检查的训练路线，适合按阶段长期使用。">
+      <div className="route-grid">
+        <article className="route-card">
+          <span>Step 1</span>
+          <h3>零基础启动</h3>
+          <p>先把五十音、N5 高频词、基础句型和慢速听力打牢，确保能读、能听、能开口。</p>
+          <ul>
+            <li>五十音逐项点读，听后跟读。</li>
+            <li>每天用闪卡记基础词和例句。</li>
+            <li>用综合自测检查假名、词汇、语法。</li>
+          </ul>
+        </article>
+        <article className="route-card">
+          <span>Step 2</span>
+          <h3>出国沟通</h3>
+          <p>围绕入境、交通、酒店、餐饮、医疗、租房、求助、工作学习八类真实场景训练。</p>
+          <ul>
+            <li>每类场景先背关键词，再练固定句。</li>
+            <li>不会的内容手动加入复习。</li>
+            <li>完成每个场景的通关检查。</li>
+          </ul>
+        </article>
+        <article className="route-card">
+          <span>Step 3</span>
+          <h3>JLPT 考证路线</h3>
+          <p>按词汇、语法、阅读、听力四块准备，当前路线会跟随你选择的等级变化。</p>
+          <div className="exam-tabs" aria-label="JLPT 考证等级">
+            {learningLevels.map((item) => (
+              <button className={item === level ? 'active' : ''} key={item} type="button" onClick={() => onLevelChange(item)}>
+                {item} 考证路线
+              </button>
+            ))}
+          </div>
+        </article>
+      </div>
+
+      <div className="roadmap-panel">
+        <div className="roadmap-head">
+          <span>{route.level}</span>
+          <div>
+            <h3>{route.label}</h3>
+            <p>{route.passTarget}</p>
+          </div>
+        </div>
+        <p className="daily-target">{route.dailyTarget}</p>
+        <div className="exam-section-grid">
+          {route.sections.map((section) => (
+            <article key={section.name}>
+              <strong>{section.name}</strong>
+              <p>{section.target}</p>
+              <small>{section.practice}</small>
+            </article>
+          ))}
+        </div>
+      </div>
+    </Section>
+  )
+}
+
+function AbroadTracks() {
+  return (
+    <Section id="abroad" title="出国沟通闯关" desc="覆盖从入境到工作学习的真实沟通任务，每一关都有场景、训练任务和通关检查。">
+      <div className="mission-grid">
+        {abroadTracks.map((track) => (
+          <article className="mission-card" key={track.id}>
+            <div className="mission-top">
+              <span>{track.title}</span>
+              <small>{track.scenarios.join(' / ')}</small>
+            </div>
+            <p>{track.goal}</p>
+            <ul className="mission-list">
+              {track.missions.map((mission) => (
+                <li key={mission}>{mission}</li>
+              ))}
+            </ul>
+            <div className="pass-check">
+              <strong>通关检查</strong>
+              <span>{track.passCheck}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </Section>
   )
 }
 
@@ -763,6 +859,7 @@ export default function App() {
           </div>
         </section>
 
+        <AbilityRoute level={progress.activeLevel} onLevelChange={setLevel} />
         <Dictionary
           favoriteWords={progress.favoriteWords}
           level={progress.activeLevel}
@@ -785,6 +882,7 @@ export default function App() {
         />
         <KanaTable />
         <Grammar level={progress.activeLevel} onLevelChange={setLevel} />
+        <AbroadTracks />
         <Phrases level={progress.activeLevel} onLevelChange={setLevel} />
         <Flashcards
           level={progress.activeLevel}
